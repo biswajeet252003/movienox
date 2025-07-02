@@ -6,6 +6,15 @@ import './MovieGrid.css';
 
 import { movieData } from '../../data/movieData';
 
+const parseReleaseDate = (dateStr) => {
+  if (!dateStr) return 0;
+  const date = Date.parse(dateStr);
+  if (!isNaN(date)) return date;
+  const yearMatch = dateStr.match(/\d{4}/);
+  if (yearMatch) return Date.parse(`01 Jan ${yearMatch[0]}`);
+  return 0;
+};
+
 const MovieGrid = ({ searchQuery = '' }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const moviesPerPage = 20;
@@ -27,17 +36,8 @@ const MovieGrid = ({ searchQuery = '' }) => {
     movie.title.toLowerCase().includes(searchQuery.toLowerCase())
   );
   
-  // Sort movies by release year (descending)
-  const sortedMovies = filteredMovies.sort((a, b) => {
-    // Extract year from releaseDate (format: 'DD Month YYYY')
-    const getYear = (movie) => {
-      if (!movie.releaseDate) return 0;
-      const parts = movie.releaseDate.trim().split(' ');
-      const year = parseInt(parts[parts.length - 1], 10);
-      return isNaN(year) ? 0 : year;
-    };
-    return getYear(b) - getYear(a); // Descending order
-  });
+  // Sort movies by full release date (newest first)
+  const sortedMovies = filteredMovies.sort((a, b) => parseReleaseDate(b.releaseDate) - parseReleaseDate(a.releaseDate));
   
   // Calculate pagination
   const totalPages = Math.ceil(sortedMovies.length / moviesPerPage);

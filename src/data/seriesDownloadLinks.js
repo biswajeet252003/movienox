@@ -32,4 +32,18 @@ export const seriesDownloadLinks = {
       }
     }
   },
+  'iron-heart-s1': {
+    title: 'Iron Heart Season 1',
+    downloadLinks: {
+      '4K': {
+        'HubCloud': 'https://hubcloud.one/drive/30a9za9mz9vagyz'
+      },
+      '1080p 10Bit': {
+        'HBLinks': 'https://hblinks.pro/archives/92725'
+      },
+      '720p': {
+        'HBLinks': 'https://hblinks.pro/archives/92726'
+      }
+    }
+  },
 }; 

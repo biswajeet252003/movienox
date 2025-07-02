@@ -35,6 +35,9 @@ export const downloadLinks = {
         'MegaUp': 'https://megaup.net/4b6ea51b83f22d198c704c5851196fe2/Kannappa_(2025)__www.moviespapa.immo_Hindi_1080p_HDTS_3.2GB.mkv',
         'MxDrop': 'https://mxdrop.to/f/jdpor7r9b1xgq',
         'StreamTape': 'https://streamtape.to/v/LYlObbP10YFR0V7',
+      },
+      '1080p HQ V2': {
+        'HubDrive': 'https://hubdrive.wales/file/11186157060'
       }
     }
   },
@@ -914,6 +917,9 @@ export const downloadLinks = {
   'nafratein-2025': {
     title: 'Nafratein (2025)',
     downloadLinks: {
+      '1080p HQ': {
+        'HubCloud': 'https://hubcloud.one/drive/h7gu6cic7yihr31'
+      },
       '1080p': {
         'HubCloud': 'https://hubcloud.one/drive/h7gu6cic7yihr31',
         'FilePress': 'https://new4.filepress.live/file/6860d0cf250203ed8b8a35f5',
@@ -950,6 +956,39 @@ export const downloadLinks = {
     downloadLinks: {
       '4K': {
         'Archive.org': 'https://archive.org/download/HindooPicturesStartWithC1/Chennai_Express_2013_1080_Hindi_6CH_Action_Comedy.mkv'
+      }
+    }
+  },
+  'sardaar-ji-3-2025': {
+    title: 'Sardaar Ji 3 (2025)',
+    downloadLinks: {
+      '720p HQ': {
+        'HubDrive': 'https://hubdrive.wales/file/5682640783'
+      }
+    }
+  },
+  'heads-of-states': {
+    title: 'Heads of States',
+    downloadLinks: {
+      '1080p WEB-DL': {
+        'HubDrive': 'https://hubdrive.wales/file/11186157060'
+      },
+      '4K': {
+        'HubDrive': 'https://hubdrive.wales/file/11186157060'
+      },
+      '720p HEVC': {
+        'HBLinks': 'https://hblinks.pro/archives/92772'
+      }
+    }
+  },
+  'the-monkey': {
+    title: 'The Monkey (2025)',
+    downloadLinks: {
+      '1080p HQ AMZN WEB-DL': {
+        'HubCloud': 'https://hubcloud.one/drive/1iij3ljtcdccdis'
+      },
+      '1080p HEVC': {
+        'OxxFile': 'https://new.oxxfile.info/s/vWWnyyIHIu/'
       }
     }
   },

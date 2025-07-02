@@ -7,11 +7,21 @@ import SeriesGridCard from '../SeriesGridCard/SeriesGridCard';
 import '../MovieGrid/MovieGrid.css'; // Reuse the same CSS
 import './GenreMovieListPage.css';
 
+const parseReleaseDate = (dateStr) => {
+  if (!dateStr) return 0;
+  const date = Date.parse(dateStr);
+  if (!isNaN(date)) return date;
+  const yearMatch = dateStr.match(/\d{4}/);
+  if (yearMatch) return Date.parse(`01 Jan ${yearMatch[0]}`);
+  return 0;
+};
+
 const GenreMovieListPage = () => {
   const { genreName } = useParams();
 
   const filteredMovies = movieData
     .filter(movie => movie.genres.some(g => g.toLowerCase() === genreName.toLowerCase()))
+    .sort((a, b) => parseReleaseDate(b.releaseDate) - parseReleaseDate(a.releaseDate))
     .map(movie => ({ ...movie, type: 'movie' }));
 
   const filteredSeries = seriesData

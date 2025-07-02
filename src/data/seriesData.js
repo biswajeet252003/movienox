@@ -311,15 +311,39 @@ seriesData.push({
   screenshots: [
     'https://static.wikia.nocookie.net/peaky-blinders/images/7/7e/Peaky_Blinders_S6_Poster.jpg',
   ],
-  downloadLinks: {
-    '1080p HQ': {
-      'HubDrive': 'https://hubdrive.wales/file/15167963101'
-    },
-    '1080p 10Bit': {
-      'HBLinks': 'https://hblinks.pro/archives/92704'
-    },
-    '720p': {
-      'HBLinks': 'https://hblinks.pro/archives/92705'
-    }
-  },
+});
+
+seriesData.push({
+  id: 'iron-heart-s1',
+  title: 'Iron Heart Season 1',
+  industry: 'Hollywood',
+  writer: 'Unknown',
+  producer: 'Unknown',
+  music: 'Unknown',
+  runtime: 'TBA',
+  language: 'English',
+  budget: 'N/A',
+  boxOffice: '',
+  certification: 'N/A',
+  awards: [],
+  streaming: [],
+  poster: '', // Add poster link if available
+  banner: '', // Add banner link if available
+  fullDescription: 'Iron Heart Season 1 is an upcoming Marvel series. More details and download links will be added soon.',
+  creators: [],
+  cast: [],
+  releaseDate: 'TBA',
+  genres: ['Action', 'Superhero'],
+  seasons: 1,
+  rating: 0,
+  reviews: 0,
+  ratingDistribution: [
+    { stars: 5, percentage: 0 },
+    { stars: 4, percentage: 0 },
+    { stars: 3, percentage: 0 },
+    { stars: 2, percentage: 0 },
+    { stars: 1, percentage: 0 },
+  ],
+  trailerId: '',
+  screenshots: [],
 }); 
