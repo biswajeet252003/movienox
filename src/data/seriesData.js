@@ -327,7 +327,7 @@ seriesData.push({
   certification: 'N/A',
   awards: [],
   streaming: [],
-  poster: '', // Add poster link if available
+  poster: 'https://i.imgur.com/YvCkIrV.jpeg',
   banner: '', // Add banner link if available
   fullDescription: 'Iron Heart Season 1 is an upcoming Marvel series. More details and download links will be added soon.',
   creators: [],
