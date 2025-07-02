@@ -1,0 +1,42 @@
+.related-movies-container {
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #3a4c3f;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.related-movies-list {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+}
+
+.related-movie-link {
+  text-decoration: none;
+  min-width: 160px;
+  flex: 0 0 auto;
+}
+
+/* Hide scrollbar for clean look */
+.related-movies-list::-webkit-scrollbar { display: none; }
+.related-movies-list { -ms-overflow-style: none; scrollbar-width: none; }
+
+@media (max-width: 600px) {
+  .related-movies-list {
+    gap: 10px;
+  }
+  .related-movie-link {
+    min-width: 90px;
+    max-width: 90px;
+  }
+  .section-title {
+    font-size: 1.2rem;
+  }
+}

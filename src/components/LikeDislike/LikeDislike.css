@@ -1,0 +1,261 @@
+.like-dislike-container {
+  background: rgba(37, 54, 43, 0.7);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+  border: 2px solid;
+  border-image: linear-gradient(135deg, #2ecc71 10%, #90cea1 90%) 1;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 28px 24px;
+  margin: 24px 0;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.like-dislike-container:hover {
+  box-shadow: 0 12px 40px 0 rgba(46,204,113,0.25), 0 1.5px 8px 0 rgba(144,206,161,0.10);
+  transform: translateY(-2px) scale(1.01);
+}
+
+.like-dislike-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.reaction-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.reaction-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 16px;
+  border: 2px solid #2c3e32;
+  border-radius: 16px;
+  background: rgba(44, 62, 50, 0.8);
+  color: #e0e0e0;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.reaction-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+  transition: left 0.5s;
+}
+
+.reaction-btn:hover::before {
+  left: 100%;
+}
+
+.reaction-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.reaction-btn.active {
+  transform: scale(1.05);
+}
+
+/* Individual reaction button colors */
+.excellent-btn:hover {
+  border-color: #f39c12;
+  background: rgba(243, 156, 18, 0.1);
+  box-shadow: 0 8px 25px rgba(243, 156, 18, 0.2);
+}
+
+.excellent-btn.active {
+  border-color: #f39c12;
+  background: rgba(243, 156, 18, 0.2);
+  box-shadow: 0 0 20px rgba(243, 156, 18, 0.4);
+  color: #f39c12;
+}
+
+.loved-btn:hover {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.1);
+  box-shadow: 0 8px 25px rgba(231, 76, 60, 0.2);
+}
+
+.loved-btn.active {
+  border-color: #e74c3c;
+  background: rgba(231, 76, 60, 0.2);
+  box-shadow: 0 0 20px rgba(231, 76, 60, 0.4);
+  color: #e74c3c;
+}
+
+.thanks-btn:hover {
+  border-color: #2ecc71;
+  background: rgba(46, 204, 113, 0.1);
+  box-shadow: 0 8px 25px rgba(46, 204, 113, 0.2);
+}
+
+.thanks-btn.active {
+  border-color: #2ecc71;
+  background: rgba(46, 204, 113, 0.2);
+  box-shadow: 0 0 20px rgba(46, 204, 113, 0.4);
+  color: #2ecc71;
+}
+
+.wow-btn:hover {
+  border-color: #9b59b6;
+  background: rgba(155, 89, 182, 0.1);
+  box-shadow: 0 8px 25px rgba(155, 89, 182, 0.2);
+}
+
+.wow-btn.active {
+  border-color: #9b59b6;
+  background: rgba(155, 89, 182, 0.2);
+  box-shadow: 0 0 20px rgba(155, 89, 182, 0.4);
+  color: #9b59b6;
+}
+
+.sad-btn:hover {
+  border-color: #3498db;
+  background: rgba(52, 152, 219, 0.1);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.2);
+}
+
+.sad-btn.active {
+  border-color: #3498db;
+  background: rgba(52, 152, 219, 0.2);
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.4);
+  color: #3498db;
+}
+
+.reaction-emoji {
+  font-size: 1.8rem;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+  transition: transform 0.2s;
+}
+
+.reaction-btn:hover .reaction-emoji {
+  transform: scale(1.1);
+}
+
+.reaction-btn.active .reaction-emoji {
+  animation: pulse 0.6s ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.reaction-label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: inherit;
+  text-align: center;
+}
+
+.reaction-count {
+  font-size: 1rem;
+  font-weight: bold;
+  color: inherit;
+}
+
+.reaction-stats {
+  text-align: center;
+  padding-top: 16px;
+  border-top: 1px solid rgba(144, 206, 161, 0.3);
+}
+
+.top-reaction {
+  margin-bottom: 12px;
+}
+
+.top-reaction-text {
+  display: block;
+  font-size: 1rem;
+  color: #90cea1;
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.reaction-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(44, 62, 50, 0.8);
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+
+.reaction-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #2ecc71 0%, #90cea1 100%);
+  border-radius: 4px;
+  transition: width 0.7s cubic-bezier(0.4,0,0.2,1);
+}
+
+.total-reactions {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-top: 12px;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .like-dislike-container {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+  .like-dislike-title {
+    font-size: 1.2rem;
+    margin-bottom: 16px;
+  }
+  .reaction-buttons {
+    gap: 8px;
+  }
+  .reaction-btn {
+    padding: 8px 10px;
+    border-radius: 12px;
+    min-width: 70px;
+  }
+  .reaction-emoji {
+    font-size: 1.5rem;
+  }
+  .reaction-label {
+    font-size: 0.7rem;
+  }
+  .reaction-count {
+    font-size: 0.85rem;
+  }
+  .top-reaction-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .reaction-buttons {
+    gap: 6px;
+  }
+  .reaction-btn {
+    padding: 6px 8px;
+    min-width: 60px;
+  }
+  .reaction-emoji {
+    font-size: 1.3rem;
+  }
+  .reaction-label {
+    font-size: 0.65rem;
+  }
+} 

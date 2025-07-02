@@ -1,0 +1,255 @@
+.lp-root {
+  min-height: 100vh;
+  background: #f9fbfd;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.lp-header {
+  background: linear-gradient(180deg, #38688a 0%, #4b8bbd 100%);
+  color: #fff;
+  padding: 18px 0 10px 0;
+  text-align: center;
+  position: relative;
+}
+
+.lp-title {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.lp-auth-btns {
+  position: absolute;
+  right: 40px;
+  top: 18px;
+}
+
+.lp-btn {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  padding: 10px 22px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.lp-login {
+  background: #e74c3c;
+}
+.lp-signup {
+  background: #d35400;
+}
+
+.lp-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.lp-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 30px 30px 20px 30px;
+  width: 80vw;
+  max-width: 900px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.lp-movie-title {
+  color: #e74c3c;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.lp-file-size {
+  font-size: 1.1rem;
+  margin-bottom: 18px;
+}
+.lp-size-green {
+  color: #27ae60;
+}
+
+.lp-download-btns {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.quality-section {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.lp-download {
+  font-size: 1.2rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  cursor: pointer;
+  transition: filter 0.2s;
+}
+
+.lp-download.active {
+  transform: scale(1.02);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.lp-download.green {
+  background: #388e3c;
+  color: #fff;
+}
+.lp-download.orange {
+  background: #ffa600;
+  color: #fff;
+}
+.lp-download.red {
+  background: #db3323;
+  color: #fff;
+}
+.lp-download.purple {
+  background: #9c27b0;
+  color: #fff;
+}
+.lp-download:hover {
+  filter: brightness(0.95);
+}
+
+.download-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-left: 20px;
+  animation: slideDown 0.3s ease-out;
+}
+
+.download-option-btn {
+  background: #f8f9fa;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  text-align: left;
+}
+
+.download-option-btn:hover {
+  background: #e9ecef;
+  border-color: #adb5bd;
+  transform: translateX(2px);
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.lp-created-by {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #222;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.lp-created-label {
+  background: #222;
+  color: #fff;
+  font-size: 0.95rem;
+  border-radius: 5px;
+  padding: 3px 10px;
+  margin-right: 7px;
+  font-weight: 600;
+}
+
+.lp-desc-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 28px 30px;
+  width: 80vw;
+  max-width: 900px;
+  margin-bottom: 50px;
+  font-size: 1.15rem;
+  color: #222;
+  text-align: justify;
+}
+
+.lp-footer {
+  background: #484e59;
+  color: #fff;
+  padding: 18px 0 10px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: auto;
+}
+.lp-footer-btns {
+  margin-top: 10px;
+}
+.lp-footer-btns button {
+  background: #fff;
+  color: #222;
+  border: none;
+  border-radius: 5px;
+  margin: 0 7px;
+  padding: 7px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.lp-footer-btns button:hover {
+  background: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+  .lp-container {
+    margin-top: 20px;
+  }
+  .lp-card, .lp-desc-card {
+    width: 95vw;
+    padding: 20px 15px;
+  }
+  .lp-header {
+    padding: 18px 0 18px 0;
+  }
+  .lp-auth-btns {
+    right: 10px;
+    top: 18px;
+  }
+  .lp-movie-title {
+    font-size: 1.1rem;
+  }
+  .lp-download {
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+  .lp-desc-card {
+    font-size: 0.95rem;
+    padding: 20px 15px;
+  }
+  .download-options {
+    margin-left: 10px;
+  }
+} 

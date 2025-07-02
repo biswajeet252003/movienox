@@ -1,0 +1,29 @@
+.movie-list-container {
+  padding: 20px 20px;
+  background-color: #242424;
+  margin-top: 80px;
+}
+
+.movie-list-title {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.movie-list-grid {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+}
+
+.movie-list-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.movie-list-grid {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} 

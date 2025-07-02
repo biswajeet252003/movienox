@@ -1,0 +1,110 @@
+.cast-crew-container {
+  padding-top: 40px;
+  margin-top: 40px;
+  border-top: 1px solid #3a4c3f;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.cast-list {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+}
+/* Hide scrollbar for clean look */
+.cast-list::-webkit-scrollbar { display: none; }
+.cast-list { -ms-overflow-style: none; scrollbar-width: none; }
+
+
+.cast-member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+.cast-initials-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #2a3a2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.cast-initials-circle span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.cast-name {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0;
+}
+
+.cast-character {
+  font-size: 0.9rem;
+  color: #a0a0a0;
+  margin: 4px 0 0 0;
+}
+
+.download-section {
+  text-align: center;
+}
+
+.download-button {
+  background-color: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  margin-top: 10px;
+}
+.download-button:hover {
+  background-color: #27ae60;
+}
+
+@media (max-width: 600px) {
+  .cast-crew-container {
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  .cast-list {
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  .cast-initials-circle {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 8px;
+  }
+  .cast-initials-circle span {
+    font-size: 1.2rem;
+  }
+  .cast-name {
+    font-size: 0.8rem;
+  }
+  .cast-character {
+    font-size: 0.7rem;
+  }
+} 

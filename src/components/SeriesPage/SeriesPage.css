@@ -1,0 +1,24 @@
+.series-page-container {
+  min-height: 100vh;
+  background-color: #11221b; /* Matching the navbar's dark background */
+  padding: 20px;
+  padding-top: 70px;
+  box-sizing: border-box;
+}
+
+.coming-soon-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.coming-soon-subtitle {
+  font-size: 1.1rem;
+  color: #ccc; /* Slightly dimmer white for the subtitle */
+}
+
+@media (max-width: 768px) {
+  .series-page-container {
+    padding-top: 70px;
+  }
+} 

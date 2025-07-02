@@ -1,0 +1,14 @@
+.genre-movie-list-page-container {
+  padding: 120px 20px 20px;
+  background-color: #11221b;
+  min-height: 100vh;
+  color: white;
+}
+
+.genre-movie-list-title {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  text-transform: capitalize;
+} 

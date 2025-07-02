@@ -1,0 +1,1302 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Space+Grotesk%3Awght%40400%3B500%3B700"
+    />
+
+    <title>Stitch Design</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
+      :root {
+        --d: 700ms;
+        --e: cubic-bezier(0.19, 1, 0.22, 1);
+        --font-sans: 'Rubik', sans-serif;
+        --font-serif: 'Cardo', serif;
+      }
+
+      /* Animated Background Effects */
+      .animated-bg {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+
+      .gradient-bg {
+        position: absolute;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(45deg, #10231c, #17352b, #214a3c, #2f6a55, #019863);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        opacity: 0.3;
+      }
+
+      @keyframes gradientShift {
+        0% { transform: translate(-50%, -50%) rotate(0deg); }
+        25% { transform: translate(-50%, -50%) rotate(90deg); }
+        50% { transform: translate(-50%, -50%) rotate(180deg); }
+        75% { transform: translate(-50%, -50%) rotate(270deg); }
+        100% { transform: translate(-50%, -50%) rotate(360deg); }
+      }
+
+      .particles {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .particle {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        animation: float 6s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+        50% { transform: translateY(-20px) rotate(180deg); opacity: 1; }
+      }
+
+      .floating-shapes {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+
+      .shape {
+        position: absolute;
+        opacity: 0.1;
+        animation: shapeFloat 8s ease-in-out infinite;
+      }
+
+      .shape.circle {
+        width: 100px;
+        height: 100px;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+      }
+
+      .shape.triangle {
+        width: 0;
+        height: 0;
+        border-left: 50px solid transparent;
+        border-right: 50px solid transparent;
+        border-bottom: 86px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .shape.square {
+        width: 80px;
+        height: 80px;
+        border: 2px solid rgba(255, 255, 255, 0.15);
+        transform: rotate(45deg);
+      }
+
+      @keyframes shapeFloat {
+        0%, 100% { transform: translateY(0px) rotate(0deg); }
+        50% { transform: translateY(-30px) rotate(180deg); }
+      }
+
+      /* Parallax effect for hero section */
+      .hero-parallax {
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-parallax::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+        background-size: 50px 50px;
+        animation: parallaxMove 20s linear infinite;
+        z-index: -1;
+      }
+
+      @keyframes parallaxMove {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-50px, -50px); }
+      }
+
+      /* Enhanced card hover effects */
+      .card {
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        overflow: hidden;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+        color: whitesmoke;
+        background-color: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        height: 350px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+
+      .card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        border-color: rgba(1, 152, 99, 0.5);
+      }
+
+      .card::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 110%;
+        background-size: cover;
+        background-position: center;
+        transition: transform calc(var(--d) * 1.5) var(--e);
+        pointer-events: none;
+        filter: brightness(0.8);
+      }
+
+      .card::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200%;
+        pointer-events: none;
+        background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0.009) 11.7%, hsla(0, 0%, 0%, 0.034) 22.1%, hsla(0, 0%, 0%, 0.072) 31.2%, hsla(0, 0%, 0%, 0.123) 39.4%, hsla(0, 0%, 0%, 0.182) 46.6%, hsla(0, 0%, 0%, 0.249) 53.1%, hsla(0, 0%, 0%, 0.320) 58.9%, hsla(0, 0%, 0%, 0.394) 64.3%, hsla(0, 0%, 0%, 0.468) 69.3%, hsla(0, 0%, 0%, 0.540) 74.1%, hsla(0, 0%, 0%, 0.607) 78.8%, hsla(0, 0%, 0%, 0.668) 83.6%, hsla(0, 0%, 0%, 0.721) 88.7%, hsla(0, 0%, 0%, 0.762) 94.1%, hsla(0, 0%, 0%, 0.790) 100% );
+        transform: translateY(-50%);
+        transition: transform calc(var(--d) * 2) var(--e);
+      }
+
+      /* Glowing effect on card hover */
+      .card:hover::before {
+        filter: brightness(1.1) contrast(1.1);
+      }
+
+      .card:hover::after {
+        background-image: linear-gradient( to bottom, hsla(0, 0%, 0%, 0) 0%, hsla(0, 0%, 0%, 0.3) 50%, hsla(0, 0%, 0%, 0.8) 100% );
+      }
+
+      /* Enhanced button effects */
+      .btn {
+        cursor: pointer;
+        margin-top: 1.5rem;
+        padding: 0.75rem 1.5rem;
+        font-size: 0.65rem;
+        font-weight: bold;
+        letter-spacing: 0.025rem;
+        text-transform: uppercase;
+        color: white;
+        background: linear-gradient(45deg, #019863, #027a50);
+        border: none;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.5s;
+      }
+
+      .btn:hover::before {
+        left: 100%;
+      }
+
+      .btn:hover {
+        background: linear-gradient(45deg, #027a50, #019863);
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(1, 152, 99, 0.4);
+      }
+
+      /* Pulse animation for hero content */
+      .hero-pulse {
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+      }
+
+      /* Floating animation for search bar */
+      .search-float {
+        animation: searchFloat 3s ease-in-out infinite;
+      }
+
+      @keyframes searchFloat {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-5px); }
+      }
+
+      .page-content {
+        display: grid;
+        grid-gap: 2.5rem;
+        padding: 1rem;
+        max-width: 1024px;
+        margin: 0 auto;
+        font-family: var(--font-sans);
+      }
+      @media (min-width: 600px) {
+        .page-content {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media (min-width: 800px) {
+        .page-content {
+          grid-template-columns: repeat(4, 1fr);
+        }
+      }
+
+      .content {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 1rem;
+        transition: transform var(--d) var(--e);
+        z-index: 1;
+      }
+      .content > * + * {
+        margin-top: 1rem;
+      }
+      .title {
+        font-size: 1.3rem;
+        font-weight: bold;
+        line-height: 1.2;
+        font-family: var(--font-sans);
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      }
+      .copy {
+        font-family: var(--font-serif);
+        font-size: 1.125rem;
+        font-style: italic;
+        line-height: 1.35;
+        color: white;
+        text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+      }
+
+      .btn:focus {
+        outline: 1px dashed yellow;
+        outline-offset: 3px;
+      }
+      @media (hover: hover) and (min-width: 600px) {
+        .card:after {
+          transform: translateY(0);
+        }
+        .content {
+          transform: translateY(calc(100% - 4.5rem));
+        }
+        .content > *:not(.title) {
+          opacity: 0;
+          transform: translateY(1rem);
+          transition: transform var(--d) var(--e), opacity var(--d) var(--e);
+        }
+        .card:hover, .card:focus-within {
+          align-items: center;
+        }
+        .card:hover:before, .card:focus-within:before {
+          transform: translateY(-4%);
+        }
+        .card:hover:after, .card:focus-within:after {
+          transform: translateY(-50%);
+        }
+        .card:hover .content, .card:focus-within .content {
+          transform: translateY(0);
+        }
+        .card:hover .content > *:not(.title), .card:focus-within .content > *:not(.title) {
+          opacity: 1;
+          transform: translateY(0);
+          transition-delay: calc(var(--d) / 8);
+        }
+        .card:focus-within:before, .card:focus-within:after, .card:focus-within .content, .card:focus-within .content > *:not(.title) {
+          transition-duration: 0s;
+        }
+      }
+      .content-faded {
+        filter: blur(4px);
+        opacity: 0.6;
+        pointer-events: none;
+        transition: all 0.3s ease;
+      }
+      #auth-buttons {
+        visibility: hidden;
+      }
+
+      /* Individual card background images using unique classes */
+      .card-kuberaa::before { background-image: url("images/kubera7.jpg"); }
+      .card-kantara::before { background-image: url("images/kantara.jpg"); }
+      .card-new-test::before { background-image: url("images/retouch_2024100622510200 (1)~2.jpg"); }
+      .card-kgf::before {
+        background-image: url("images/kgf chapter 1 (2).jpg");
+        background-position: top;
+      }
+      .card-baahubali::before {
+        background-image: url("images/bahubali.jpg");
+        background-position: top;
+      }
+      .card-dangal::before {
+        background-image: url("images/Dangal.jpg");
+        background-position: top;
+      }
+      .card-3-idiots::before {
+        background-image: url("images/3 idiots.jpg");
+        background-position: top;
+      }
+      .card-saaho::before { background-image: url("images/saaho.jpg"); }
+      .card-last-stand::before { background-image: url("images/retouch_2024100622510200 (1)~2.jpg"); }
+      .card-pk::before {
+        background-image: url("images/pk.jpg");
+        background-position: top;
+      }
+      .card-laugh-out-loud::before { background-image: url("images/retouch_2024100622510200 (1)~2.jpg"); }
+      .card-padakkalam::before { 
+        background-image: url("images/padakkalam_2025224.jpg");
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Animated Background Elements -->
+    <div class="animated-bg">
+      <div class="gradient-bg"></div>
+      <div class="particles" id="particles"></div>
+      <div class="floating-shapes" id="floating-shapes"></div>
+    </div>
+
+    <div class="relative flex size-full min-h-screen flex-col bg-[#10231c] dark group/design-root overflow-x-hidden" style='font-family: "Space Grotesk", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#214a3c] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-white">
+              <div class="size-4">
+                <svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg" class="size-4">
+                  <path d="M8 0C3.6 0 0 3.6 0 8s3.6 8 8 8 8-3.6 8-8-3.6-8-8-8zm0 14c-3.3 0-6-2.7-6-6s2.7-6 6-6 6 2.7 6 6-2.7 6-6 6z" fill="currentColor"/>
+                </svg>
+              </div>
+              <div class="text-white text-sm font-medium leading-normal">MovieKnox</div>
+            </div>
+            <div class="flex items-center gap-9">
+              <a class="text-white text-sm font-medium leading-normal" href="home.html">Home</a>
+              <a class="text-white text-sm font-medium leading-normal" href="tv-shows.html">TV Shows</a>
+              <a class="text-white text-sm font-medium leading-normal" href="genres.html">Genres</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <div id="auth-buttons" class="flex items-center gap-2">
+              <button
+                id="signup-button"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-[#019863] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Sign Up</span>
+              </button>
+              <button
+                id="login-button"
+                class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-[#214a3c] text-white text-sm font-bold leading-normal tracking-[0.015em]"
+              >
+                <span class="truncate">Log In</span>
+              </button>
+            </div>
+          </div>
+        </header>
+        <div class="px-0 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col w-full flex-1">
+            <div class="@container">
+              <div class="@[480px]:p-4">
+                <div
+                  id="hero-banner"
+                  class="hero-parallax relative flex min-h-[480px] flex-col gap-6 bg-cover bg-center bg-no-repeat transition-all duration-500 ease-in-out @[480px]:gap-8 @[480px]:rounded items-center justify-center p-4"
+                  style='background-image: linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("images/kantara.jpg");'
+                >
+                  <div id="hero-content" class="hero-pulse flex flex-col gap-2 text-center">
+                    <h1
+                      class="text-white text-4xl font-black leading-tight tracking-[-0.033em] @[480px]:text-5xl @[480px]:font-black @[480px]:leading-tight @[480px]:tracking-[-0.033em]"
+                    >
+                      Kantara
+                    </h1>
+                    <h2 class="text-white text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal">
+                      A mystical action-thriller.
+                    </h2>
+                  </div>
+                  <label class="search-float relative flex flex-col min-w-40 h-14 w-full max-w-[480px] @[480px]:h-16">
+                    <div class="flex w-full flex-1 items-stretch rounded h-full">
+                      <div
+                        class="text-[#8ecdb7] flex border border-[#2f6a55] bg-[#17352b] items-center justify-center pl-[15px] rounded-l border-r-0"
+                        data-icon="MagnifyingGlass"
+                        data-size="20px"
+                        data-weight="regular"
+                      >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                          <path
+                            d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                          ></path>
+                        </svg>
+                      </div>
+                      <input
+                        placeholder="Search for movies"
+                        id="main-search-input"
+                        class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-white focus:outline-0 focus:ring-0 border border-[#2f6a55] bg-[#17352b] focus:border-[#2f6a55] h-full placeholder:text-[#8ecdb7] px-[15px] rounded-r-none border-r-0 pr-2 rounded-l-none border-l-0 pl-2 text-sm font-normal leading-normal @[480px]:text-base @[480px]:font-normal @[480px]:leading-normal"
+                        value=""
+                      />
+                      <div class="flex items-center justify-center rounded-r border-l-0 border border-[#2f6a55] bg-[#17352b] pr-[7px]">
+                        <button
+                          id="main-search-button"
+                          class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 @[480px]:h-12 @[480px]:px-5 bg-[#019863] text-white text-sm font-bold leading-normal tracking-[0.015em] @[480px]:text-base @[480px]:font-bold @[480px]:leading-normal @[480px]:tracking-[0.015em]"
+                        >
+                          <span class="truncate">Search</span>
+                        </button>
+                      </div>
+                    </div>
+                    <div id="main-search-suggestions" class="absolute top-full mt-1 w-full bg-[#17352b] rounded-md shadow-lg z-10 hidden max-h-60 overflow-y-auto"></div>
+                  </label>
+                  <div id="hero-dots" class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2"></div>
+                </div>
+              </div>
+           
+            <main id="movie-grid" class="page-content">
+              <div class="card card-padakkalam">
+                <div class="content">
+                  <h2 class="title">Padakkalam</h2>
+                  <p class="copy">A thrilling action-packed adventure with intense drama.</p><a href="movies/padakkalam.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-kuberaa">
+                <div class="content">
+                  <h2 class="title">Kuberaa</h2>
+                  <p class="copy">A new exciting movie.</p><a href="movies/kuberaa.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-kantara">
+                <div class="content">
+                  <h2 class="title">Kantara</h2>
+                  <p class="copy">A mystical action-thriller.</p><a href="movies/kantara.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-new-test">
+                <div class="content">
+                  <h2 class="title">New Test Movie</h2>
+                  <p class="copy">This is a test card.</p><a href="movies/new-test-movie.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-kgf">
+                <div class="content">
+                  <h2 class="title">KGF Chapter 1</h2>
+                  <p class="copy">A gripping South Indian action drama.</p><a href="movies/kgf-chapter-1.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-baahubali">
+                <div class="content">
+                  <h2 class="title">Baahubali</h2>
+                  <p class="copy">Epic Bollywood historical action film.</p><a href="movies/baahubali.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-dangal">
+                <div class="content">
+                  <h2 class="title">Dangal</h2>
+                  <p class="copy">Inspirational Bollywood sports drama.</p><a href="movies/dangal.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-3-idiots">
+                <div class="content">
+                  <h2 class="title">3 Idiots</h2>
+                  <p class="copy">Popular Bollywood comedy-drama.</p><a href="movies/3-idiots.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-saaho">
+                <div class="content">
+                  <h2 class="title">Saaho</h2>
+                  <p class="copy">Action thriller from South Indian cinema.</p><a href="movies/saaho.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-last-stand">
+                <div class="content">
+                  <h2 class="title">The Last Stand</h2>
+                  <p class="copy">A thrilling action-packed adventure.</p><a href="movies/the-last-stand.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-pk">
+                <div class="content">
+                  <h2 class="title">PK</h2>
+                  <p class="copy">A thrilling action-packed adventure.</p><a href="movies/pk.html" class="btn">View Movie</a>
+                </div>
+              </div>
+              <div class="card card-laugh-out-loud">
+                <div class="content">
+                  <h2 class="title">Laugh Out Loud</h2>
+                  <p class="copy">A hilarious comedy that will have you in stitches.</p><a href="movies/laugh-out-loud.html" class="btn">View Movie</a>
+                </div>
+              </div>
+            </main>
+            <div class="flex justify-center items-center gap-4 py-8">
+              <button id="prev-page" class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-[#214a3c] text-white text-sm font-bold leading-normal tracking-[0.015em] disabled:opacity-50 disabled:cursor-not-allowed">
+                <span>Previous</span>
+              </button>
+              <span id="page-info" class="text-white text-sm font-medium"></span>
+              <button id="next-page" class="flex min-w-[120px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-[#214a3c] text-white text-sm font-bold leading-normal tracking-[0.015em] disabled:opacity-50 disabled:cursor-not-allowed">
+                <span>Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <footer class="flex flex-col items-center gap-8 border-t border-solid border-t-[#214a3c] px-10 py-8 text-white">
+        <div class="flex w-full flex-wrap items-center justify-between gap-8">
+          <div class="flex items-center gap-4">
+            <div class="size-4">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g clip-path="url(#clip0_6_543)">
+                  <path
+                    d="M42.1739 20.1739L27.8261 5.82609C29.1366 7.13663 28.3989 10.1876 26.2002 13.7654C24.8538 15.9564 22.9595 18.3449 20.6522 20.6522C18.3449 22.9595 15.9564 24.8538 13.7654 26.2002C10.1876 28.3989 7.13663 29.1366 5.82609 27.8261L20.1739 42.1739C21.4845 43.4845 24.5355 42.7467 28.1133 40.548C30.3042 39.2016 32.6927 37.3073 35 35C37.3073 32.6927 39.2016 30.3042 40.548 28.1133C42.7467 24.5355 43.4845 21.4845 42.1739 20.1739Z"
+                    fill="currentColor"
+                  ></path>
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.24189 26.4066C7.31369 26.4411 7.64204 26.5637 8.52504 26.3738C9.59462 26.1438 11.0343 25.5311 12.7183 24.4963C14.7583 23.2426 17.0256 21.4503 19.238 19.238C21.4503 17.0256 23.2426 14.7583 24.4963 12.7183C25.5311 11.0343 26.1438 9.59463 26.3738 8.52504C26.5637 7.64204 26.4411 7.31369 26.4066 7.24189C26.345 7.21246 26.143 7.14535 25.6664 7.1918C24.9745 7.25925 23.9954 7.5498 22.7699 8.14278C20.3369 9.32007 17.3369 11.4915 14.4142 14.4142C11.4915 17.3369 9.32007 20.3369 8.14278 22.7699C7.5498 23.9954 7.25925 24.9745 7.1918 25.6664C7.14534 26.143 7.21246 26.345 7.24189 26.4066ZM29.9001 10.7285C29.4519 12.0322 28.7617 13.4172 27.9042 14.8126C26.465 17.1544 24.4686 19.6641 22.0664 22.0664C19.6641 24.4686 17.1544 26.465 14.8126 27.9042C13.4172 28.7617 12.0322 29.4519 10.7285 29.9001L21.5754 40.747C21.6001 40.7606 21.8995 40.931 22.8729 40.7217C23.9424 40.4916 25.3821 39.879 27.0661 38.8441C29.1062 37.5904 31.3734 35.7982 33.5858 33.5858C35.7982 31.3734 37.5904 29.1062 38.8441 27.0661C39.879 25.3821 40.4916 23.9425 40.7216 22.8729C40.931 21.8995 40.7606 21.6001 40.747 21.5754L29.9001 10.7285ZM29.2403 4.41187L43.5881 18.7597C44.9757 20.1473 44.9743 22.1235 44.6322 23.7139C44.2714 25.3919 43.4158 27.2666 42.252 29.1604C40.8128 31.5022 38.8165 34.012 36.4142 36.4142C34.012 38.8165 31.5022 40.8128 29.1604 42.252C27.2666 43.4158 25.3919 44.2714 23.7139 44.6322C22.1235 44.9743 20.1473 44.9757 18.7597 43.5881L4.41187 29.2403C3.29027 28.1187 3.08209 26.5973 3.21067 25.2783C3.34099 23.9415 3.8369 22.4852 4.54214 21.0277C5.96129 18.0948 8.43335 14.7382 11.5858 11.5858C14.7382 8.43335 18.0948 5.9613 21.0277 4.54214C22.4852 3.8369 23.9415 3.34099 25.2783 3.21067C26.5973 3.08209 28.1187 3.29028 29.2403 4.41187Z"
+                    fill="currentColor"
+                  ></path>
+                </g>
+                <defs>
+                  <clipPath id="clip0_6_543"><rect width="48" height="48" fill="white"></rect></clipPath>
+                </defs>
+              </svg>
+            </div>
+            <h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">StreamVerse</h2>
+          </div>
+          <div class="flex items-center gap-9">
+            <a class="text-white text-sm font-medium leading-normal" href="home.html">Home</a>
+            <a class="text-white text-sm font-medium leading-normal" href="tv-shows.html">TV Shows</a>
+            <a class="text-white text-sm font-medium leading-normal" href="genres.html">Genres</a>
+          </div>
+        </div>
+        <a href="https://t.me/Movieknox" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 min-w-[120px] cursor-pointer justify-center overflow-hidden rounded-full h-12 px-6 bg-[#019863] text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-[#027a50] transition-colors">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M9.78 18.65l.28-4.23-7.68-2.43c-.79-.25-1.04-1.25-.48-1.83l15.97-10.99c.53-.36 1.39.06 1.15.75l-2.92 14.15c-.21.99-1.22 1.48-2.02.93l-4.1-3.22-1.89 1.8c-.37.36-1 .36-1.37 0z"></path>
+          </svg>
+          <span>Join on Telegram</span>
+        </a>
+        <div class="text-[#8ecdb7] text-sm">© 2024 StreamVerse. All rights reserved.</div>
+      </footer>
+    </div>
+    <div id="login-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-20">
+      <div class="bg-[#17352b] p-8 rounded-lg shadow-xl w-full max-w-sm relative">
+        <button id="close-login-modal" class="absolute top-3 right-3 text-white hover:text-gray-300 text-2xl font-bold">&times;</button>
+        <h2 class="text-2xl font-bold text-white mb-6 text-center">Log In</h2>
+        <form>
+          <div class="mb-4">
+            <label for="login-email" class="block text-white mb-2">Email or Username</label>
+            <input type="text" id="login-email" class="w-full p-3 rounded bg-[#214a3c] text-white border border-[#2f6a55] focus:outline-none focus:border-[#019863]">
+          </div>
+          <div class="mb-6">
+            <label for="login-password" class="block text-white mb-2">Password</label>
+            <input type="password" id="login-password" class="w-full p-3 rounded bg-[#214a3c] text-white border border-[#2f6a55] focus:outline-none focus:border-[#019863]">
+          </div>
+          <div id="login-error" class="text-red-500 text-sm mb-4 text-center hidden"></div>
+          <button type="submit" class="w-full bg-[#019863] text-white py-3 rounded font-bold hover:bg-[#027a50] transition-colors disabled:opacity-75 disabled:cursor-not-allowed">Log In</button>
+        </form>
+      </div>
+    </div>
+    <div id="signup-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-20">
+      <div class="bg-[#17352b] p-8 rounded-lg shadow-xl w-full max-w-sm relative">
+        <button id="close-signup-modal" class="absolute top-3 right-3 text-white hover:text-gray-300 text-2xl font-bold">&times;</button>
+        <h2 class="text-2xl font-bold text-white mb-6 text-center">Sign Up</h2>
+        <form>
+          <div class="mb-4">
+            <label for="signup-username" class="block text-white mb-2">Username</label>
+            <input type="text" id="signup-username" class="w-full p-3 rounded bg-[#214a3c] text-white border border-[#2f6a55] focus:outline-none focus:border-[#019863]">
+          </div>
+          <div class="mb-4">
+            <label for="signup-email" class="block text-white mb-2">Email</label>
+            <input type="email" id="signup-email" class="w-full p-3 rounded bg-[#214a3c] text-white border border-[#2f6a55] focus:outline-none focus:border-[#019863]">
+          </div>
+          <div class="mb-6">
+            <label for="signup-password" class="block text-white mb-2">Password</label>
+            <input type="password" id="signup-password" class="w-full p-3 rounded bg-[#214a3c] text-white border border-[#2f6a55] focus:outline-none focus:border-[#019863]">
+          </div>
+          <div id="signup-error" class="text-red-500 text-sm mb-4 text-center hidden"></div>
+          <button type="submit" class="w-full bg-[#019863] text-white py-3 rounded font-bold hover:bg-[#027a50] transition-colors disabled:opacity-75 disabled:cursor-not-allowed">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    <div id="alert-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-20">
+      <div class="bg-[#17352b] p-8 rounded-lg shadow-xl w-full max-w-sm relative text-center">
+        <button id="close-alert-button" class="absolute top-3 right-3 text-white hover:text-gray-300 text-2xl font-bold">&times;</button>
+        <p class="text-white text-lg mb-6">Please log in or sign up to view movies.</p>
+        <button id="ok-alert-button" class="bg-[#019863] text-white py-2 px-6 rounded font-bold hover:bg-[#027a50] transition-colors">OK</button>
+      </div>
+    </div>
+<script type="module">
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
+    apiKey: "AIzaSyBuxLRrhPA_6hYtmPLdrn661zejd4uP1Dc",
+    authDomain: "dentifi-77623.firebaseapp.com",
+    databaseURL: "https://dentifi-77623-default-rtdb.firebaseio.com",
+    projectId: "dentifi-77623",
+    storageBucket: "dentifi-77623.firebasestorage.app",
+    messagingSenderId: "909027688398",
+    appId: "1:909027688398:web:711eeeb7e348775825f59f",
+    measurementId: "G-B7ME5XCMYP"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
+  const auth = getAuth(app);
+
+
+      document.addEventListener('DOMContentLoaded', () => {
+        // Generate animated background elements
+        function createParticles() {
+          const particlesContainer = document.getElementById('particles');
+          const particleCount = 50;
+          
+          for (let i = 0; i < particleCount; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.top = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 6 + 's';
+            particle.style.animationDuration = (Math.random() * 3 + 3) + 's';
+            particlesContainer.appendChild(particle);
+          }
+        }
+
+        function createFloatingShapes() {
+          const shapesContainer = document.getElementById('floating-shapes');
+          const shapeTypes = ['circle', 'triangle', 'square'];
+          const shapeCount = 15;
+          
+          for (let i = 0; i < shapeCount; i++) {
+            const shape = document.createElement('div');
+            const shapeType = shapeTypes[Math.floor(Math.random() * shapeTypes.length)];
+            shape.className = `shape ${shapeType}`;
+            shape.style.left = Math.random() * 100 + '%';
+            shape.style.top = Math.random() * 100 + '%';
+            shape.style.animationDelay = Math.random() * 8 + 's';
+            shape.style.animationDuration = (Math.random() * 4 + 6) + 's';
+            shapesContainer.appendChild(shape);
+          }
+        }
+
+        // Initialize background animations
+        createParticles();
+        createFloatingShapes();
+
+        const heroBanner = document.getElementById('hero-banner');
+        const heroContent = document.getElementById('hero-content');
+        const heroDotsContainer = document.getElementById('hero-dots');
+
+        const featuredMovies = [
+          {
+            title: 'Padakkalam',
+            description: 'A thrilling action-packed adventure with intense drama.',
+            image: 'banner/padakkalam_2025224.jpg',
+            backgroundPosition: 'center'
+          },
+          {
+            title: '3 Idiots',
+            description: 'Popular Bollywood comedy-drama.',
+            image: 'banner/3 idiots banner.jpg',
+            backgroundPosition: 'center'
+          },
+          {
+            title: 'KGF Chapter 1',
+            description: 'A gripping South Indian action drama.',
+            image: 'banner/kgf chapter 1.jpg',
+            backgroundPosition: 'center top'
+          },
+          {
+            title: 'Baahubali',
+            description: 'Epic Bollywood historical action film.',
+            image: 'banner/bahubali banner.jpg',
+            backgroundPosition: 'center top'
+          },
+          {
+            title: 'Kantara',
+            description: 'A mystical action-thriller.',
+            image: 'banner/kantara.jpg',
+            backgroundPosition: 'center'
+          }
+        ];
+
+        let currentSlide = 0;
+
+        function updateHeroBanner(slideIndex) {
+          const movie = featuredMovies[slideIndex];
+          heroBanner.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.4) 100%), url("${movie.image}")`;
+          heroBanner.style.backgroundPosition = movie.backgroundPosition || 'center';
+          const [title, description] = heroContent.children;
+          title.textContent = movie.title;
+          description.textContent = movie.description;
+
+          const dots = heroDotsContainer.children;
+          for (let i = 0; i < dots.length; i++) {
+            dots[i].classList.toggle('bg-white', i === slideIndex);
+            dots[i].classList.toggle('bg-gray-500', i !== slideIndex);
+          }
+        }
+
+        featuredMovies.forEach((_, index) => {
+          const dot = document.createElement('button');
+          dot.className = `w-3 h-3 rounded-full transition-colors duration-300 ${index === 0 ? 'bg-white' : 'bg-gray-500'}`;
+          dot.addEventListener('click', () => {
+            currentSlide = index;
+            updateHeroBanner(currentSlide);
+          });
+          heroDotsContainer.appendChild(dot);
+        });
+
+        setInterval(() => {
+          currentSlide = (currentSlide + 1) % featuredMovies.length;
+          updateHeroBanner(currentSlide);
+        }, 5000);
+
+        updateHeroBanner(0);
+
+        const mainSearchInput = document.getElementById('main-search-input');
+        mainSearchInput.value = '';
+        const mainSearchSuggestions = document.getElementById('main-search-suggestions');
+        const mainSearchButton = document.getElementById('main-search-button');
+        const grid = document.getElementById('movie-grid');
+        const allCards = Array.from(grid.querySelectorAll('.card'));
+        const prevButton = document.getElementById('prev-page');
+        const nextButton = document.getElementById('next-page');
+        const pageInfo = document.getElementById('page-info');
+        const paginationControls = prevButton.parentElement;
+
+        const cardsPerPage = 8;
+        let currentPage = 1;
+        let currentCards = allCards;
+        let activeSuggestionIndex = -1;
+
+        // Function to sort cards - new movies first
+        function sortCardsByNewness(cards) {
+            return cards.sort((a, b) => {
+                const aIsNew = a.classList.contains('new-movie');
+                const bIsNew = b.classList.contains('new-movie');
+                
+                if (aIsNew && !bIsNew) return -1;
+                if (!aIsNew && bIsNew) return 1;
+                return 0;
+            });
+        }
+
+        function showPage(page) {
+            currentPage = page;
+            const totalCards = currentCards.length;
+            const totalPages = Math.ceil(totalCards / cardsPerPage);
+
+            allCards.forEach(card => card.style.display = 'none');
+            
+            let noResultsMessage = document.getElementById('no-results-message');
+            if (noResultsMessage) {
+                noResultsMessage.remove();
+            }
+
+            if (totalCards === 0) {
+                paginationControls.style.display = 'none';
+                if (!document.getElementById('no-results-message')) {
+                    const message = document.createElement('p');
+                    message.id = 'no-results-message';
+                    message.textContent = 'This movie is not available on our server.';
+                    message.className = 'text-white text-center col-span-full';
+                    grid.appendChild(message);
+                }
+            } else {
+                paginationControls.style.display = 'flex';
+                const startIndex = (page - 1) * cardsPerPage;
+                const endIndex = startIndex + cardsPerPage;
+                
+                const cardsToShow = currentCards.slice(startIndex, endIndex);
+                cardsToShow.forEach(card => {
+                    card.style.display = 'flex';
+                });
+
+                pageInfo.textContent = `Page ${currentPage} of ${totalPages}`;
+                prevButton.disabled = currentPage === 1;
+                nextButton.disabled = currentPage === totalPages || totalPages === 0;
+            }
+        }
+        
+        function setupPagination(cards) {
+            // Sort cards by newness before pagination
+            currentCards = sortCardsByNewness(cards);
+            showPage(1);
+        }
+
+        function updateSuggestions(searchTerm) {
+            mainSearchSuggestions.innerHTML = '';
+            activeSuggestionIndex = -1;
+            if (searchTerm.length === 0) {
+                mainSearchSuggestions.classList.add('hidden');
+                return;
+            }
+
+            const filteredCards = allCards.filter(card => {
+                const titleElement = card.querySelector('.title');
+                return titleElement && titleElement.textContent.toLowerCase().includes(searchTerm);
+            });
+
+            if (filteredCards.length > 0) {
+                filteredCards.forEach((card, index) => {
+                    const titleElement = card.querySelector('.title');
+                    const suggestionItem = document.createElement('a');
+                    suggestionItem.href = card.querySelector('.btn').href;
+                    suggestionItem.textContent = titleElement.textContent;
+                    suggestionItem.className = 'block px-4 py-2 text-white hover:bg-[#019863]';
+                    suggestionItem.addEventListener('mouseover', () => {
+                        activeSuggestionIndex = index;
+                        updateSuggestionHighlight();
+                    });
+                    mainSearchSuggestions.appendChild(suggestionItem);
+                });
+                mainSearchSuggestions.classList.remove('hidden');
+            } else {
+                mainSearchSuggestions.classList.add('hidden');
+            }
+        }
+
+        function updateSuggestionHighlight() {
+            const suggestions = mainSearchSuggestions.querySelectorAll('a');
+            suggestions.forEach((suggestion, index) => {
+                if (index === activeSuggestionIndex) {
+                    suggestion.classList.add('bg-[#027a50]');
+                } else {
+                    suggestion.classList.remove('bg-[#027a50]');
+                }
+            });
+        }
+
+        function updateGrid(updateFunction) {
+            grid.style.transition = 'opacity 0.15s ease-in-out';
+            grid.style.opacity = '0';
+            setTimeout(() => {
+                updateFunction();
+                grid.style.opacity = '1';
+            }, 150);
+        }
+
+        function handleSearch(event) {
+            const searchTerm = event.target.value.toLowerCase().trim();
+            
+            updateSuggestions(searchTerm);
+
+            const filteredCards = allCards.filter(card => {
+                const titleElement = card.querySelector('.title');
+                return titleElement && titleElement.textContent.toLowerCase().includes(searchTerm);
+            });
+            
+            updateGrid(() => setupPagination(filteredCards));
+        }
+
+        function handleSearchAndRedirect() {
+          if (currentCards.length === 1) {
+            window.location.href = currentCards[0].querySelector('.btn').href;
+          }
+        }
+
+        function handleKeyDown(event) {
+            const suggestions = mainSearchSuggestions.querySelectorAll('a');
+            if (suggestions.length === 0) {
+                 if (event.key === 'Enter') {
+                    handleSearchAndRedirect();
+                 }
+                 return;
+            }
+
+            if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                activeSuggestionIndex = (activeSuggestionIndex + 1) % suggestions.length;
+                updateSuggestionHighlight();
+            } else if (event.key === 'ArrowUp') {
+                event.preventDefault();
+                activeSuggestionIndex = (activeSuggestionIndex - 1 + suggestions.length) % suggestions.length;
+                updateSuggestionHighlight();
+            } else if (event.key === 'Enter') {
+                event.preventDefault();
+                if (activeSuggestionIndex > -1) {
+                    suggestions[activeSuggestionIndex].click();
+                } else {
+                    handleSearchAndRedirect();
+                }
+            }
+        }
+        
+        setupPagination(allCards);
+
+        allCards.forEach(card => {
+            const viewMovieLink = card.querySelector('a.btn');
+            if (viewMovieLink) {
+                viewMovieLink.addEventListener('click', function(event) {
+                    if (!auth.currentUser) {
+                        event.preventDefault();
+                        restrictedAccessAttempt = true;
+                        showAlertModal('Please log in or sign up to view movies.');
+                    }
+                });
+            }
+        });
+
+        mainSearchInput.addEventListener('input', handleSearch);
+        mainSearchInput.addEventListener('keydown', handleKeyDown);
+
+        if (mainSearchButton) mainSearchButton.addEventListener('click', handleSearchAndRedirect);
+
+        document.addEventListener('click', (event) => {
+          if (!mainSearchInput.contains(event.target) && !mainSearchSuggestions.contains(event.target)) {
+            mainSearchSuggestions.classList.add('hidden');
+          }
+        });
+
+        prevButton.addEventListener('click', () => {
+          updateGrid(() => {
+            if (currentPage > 1) {
+                showPage(currentPage - 1);
+            }
+          });
+        });
+
+        nextButton.addEventListener('click', () => {
+          updateGrid(() => {
+            const totalPages = Math.ceil(currentCards.length / cardsPerPage);
+            if (currentPage < totalPages) {
+                showPage(currentPage + 1);
+            }
+          });
+        });
+
+        const loginModal = document.getElementById('login-modal');
+        const signupModal = document.getElementById('signup-modal');
+        const loginButton = document.getElementById('login-button');
+        const signupButton = document.getElementById('signup-button');
+        const closeLoginModal = document.getElementById('close-login-modal');
+        const closeSignupModal = document.getElementById('close-signup-modal');
+        const authButtonsContainer = document.getElementById('auth-buttons');
+        const alertModal = document.getElementById('alert-modal');
+        const closeAlertButton = document.getElementById('close-alert-button');
+        const okAlertButton = document.getElementById('ok-alert-button');
+
+        let restrictedAccessAttempt = false;
+        const contentToFade = document.querySelector('.layout-content-container').parentElement;
+        const footerToFade = document.querySelector('footer');
+
+        function fadePageContent() {
+            contentToFade.classList.add('content-faded');
+            footerToFade.classList.add('content-faded');
+        }
+
+        function unfadePageContent() {
+            contentToFade.classList.remove('content-faded');
+            footerToFade.classList.remove('content-faded');
+            restrictedAccessAttempt = false;
+        }
+
+        function showAlertModal(message) {
+            alertModal.querySelector('p').textContent = message;
+            alertModal.classList.remove('hidden');
+        }
+
+        function hideAlertModal() {
+            alertModal.classList.add('hidden');
+            if (restrictedAccessAttempt && !auth.currentUser) {
+                fadePageContent();
+            }
+        }
+
+        function showModal(modal) {
+          modal.classList.remove('hidden');
+          const form = modal.querySelector('form');
+          if (form) {
+            form.reset();
+            // Explicitly clear all input fields to combat browser autofill
+            const inputs = form.querySelectorAll('input');
+            inputs.forEach(input => {
+                input.value = '';
+            });
+          }
+          const errorDisplay = modal.querySelector('[id$="-error"]');
+          if (errorDisplay) {
+            errorDisplay.classList.add('hidden');
+          }
+        }
+
+        function hideModal(modal) {
+          modal.classList.add('hidden');
+        }
+        
+        function attachAuthEventListeners() {
+            const loginBtn = document.getElementById('login-button');
+            const signupBtn = document.getElementById('signup-button');
+            if(loginBtn) loginBtn.addEventListener('click', () => showModal(loginModal));
+            if(signupBtn) signupBtn.addEventListener('click', () => showModal(signupModal));
+        }
+
+        closeLoginModal.addEventListener('click', () => hideModal(loginModal));
+        closeSignupModal.addEventListener('click', () => hideModal(signupModal));
+
+        closeAlertButton.addEventListener('click', hideAlertModal);
+        okAlertButton.addEventListener('click', hideAlertModal);
+
+        window.addEventListener('click', (event) => {
+          if (event.target == loginModal) {
+            hideModal(loginModal);
+          }
+          if (event.target == signupModal) {
+            hideModal(signupModal);
+          }
+        });
+
+        const loginForm = loginModal.querySelector('form');
+        const signupForm = signupModal.querySelector('form');
+
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('signup-email').value;
+            const password = document.getElementById('signup-password').value;
+            const signupButton = signupForm.querySelector('button[type="submit"]');
+            const signupError = document.getElementById('signup-error');
+
+            signupButton.disabled = true;
+            signupButton.textContent = 'Signing Up...';
+            signupError.classList.add('hidden');
+            
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    hideModal(signupModal);
+                    showAlertModal('Sign up successful!');
+                })
+                .catch((error) => {
+                    signupError.textContent = error.message;
+                    signupError.classList.remove('hidden');
+                })
+                .finally(() => {
+                    signupButton.disabled = false;
+                    signupButton.textContent = 'Sign Up';
+                });
+        });
+
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = document.getElementById('login-email').value;
+            const password = document.getElementById('login-password').value;
+            const loginButton = loginForm.querySelector('button[type="submit"]');
+            const loginError = document.getElementById('login-error');
+
+            loginButton.disabled = true;
+            loginButton.textContent = 'Logging In...';
+            loginError.classList.add('hidden');
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    hideModal(loginModal);
+                    showAlertModal('Login successful!');
+                })
+                .catch((error) => {
+                    loginError.textContent = error.message;
+                    loginError.classList.remove('hidden');
+                })
+                .finally(() => {
+                    loginButton.disabled = false;
+                    loginButton.textContent = 'Log In';
+                });
+        });
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                authButtonsContainer.innerHTML = `
+                    <div class="relative">
+                        <button id="profile-button" class="p-2 rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-[#10231c] focus:ring-white">
+                             <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.121 17.804A13.937 13.937 0 0112 16c2.5 0 4.847.655 6.879 1.804M15 10a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        </button>
+                        <div id="profile-dropdown" class="absolute right-0 mt-2 w-48 bg-[#17352b] rounded-md shadow-lg py-1 z-20 hidden">
+                            <div class="px-4 py-2 text-sm text-gray-400">${user.email}</div>
+                            <a href="#" id="logout-button" class="block px-4 py-2 text-sm text-white hover:bg-[#019863]">Log Out</a>
+                        </div>
+                    </div>
+                `;
+                
+                const profileButton = document.getElementById('profile-button');
+                const profileDropdown = document.getElementById('profile-dropdown');
+
+                profileButton.addEventListener('click', (event) => {
+                    event.stopPropagation();
+                    profileDropdown.classList.toggle('hidden');
+                });
+
+                document.getElementById('logout-button').addEventListener('click', (e) => {
+                    e.preventDefault();
+                    auth.signOut();
+                });
+
+                document.addEventListener('click', (event) => {
+                    if (profileDropdown && !profileDropdown.classList.contains('hidden') && !profileButton.contains(event.target)) {
+                        profileDropdown.classList.add('hidden');
+                    }
+                });
+                unfadePageContent();
+            } else {
+                authButtonsContainer.innerHTML = `
+                    <button id="signup-button" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-[#019863] text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Sign Up</span></button>
+                    <button id="login-button" class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded h-10 px-4 bg-[#214a3c] text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Log In</span></button>
+                `;
+                attachAuthEventListeners();
+            }
+            authButtonsContainer.style.visibility = 'visible';
+        });
+        
+        attachAuthEventListeners();
+
+        // Search functionality
+        let currentFocus = -1;
+        
+        const allMovies = [
+          { name: '3 Idiots', file: 'movies/3-idiots.html' },
+          { name: 'Baahubali', file: 'movies/baahubali.html' },
+          { name: 'Dangal', file: 'movies/dangal.html' },
+          { name: 'KGF Chapter 1', file: 'movies/kgf-chapter-1.html' },
+          { name: 'Kantara', file: 'movies/kantara.html' },
+          { name: 'Kuberaa', file: 'movies/kuberaa.html' },
+          { name: 'Laugh Out Loud', file: 'movies/laugh-out-loud.html' },
+          { name: 'New Test Movie', file: 'movies/new-test-movie.html' },
+          { name: 'Padakkalam', file: 'movies/padakkalam.html' },
+          { name: 'PK', file: 'movies/pk.html' },
+          { name: 'Saaho', file: 'movies/saaho.html' },
+          { name: 'The Last Stand', file: 'movies/the-last-stand.html' }
+        ];
+        
+        mainSearchInput.addEventListener('input', (e) => {
+          const query = e.target.value.toLowerCase();
+          const suggestions = allMovies.filter(movie => 
+            movie.name.toLowerCase().includes(query)
+          );
+          
+          displaySuggestions(suggestions);
+        });
+
+        function displaySuggestions(suggestions) {
+          mainSearchSuggestions.innerHTML = '';
+          if (suggestions.length === 0) {
+            mainSearchSuggestions.classList.add('hidden');
+            return;
+          }
+          
+          suggestions.forEach((movie, index) => {
+            const div = document.createElement('div');
+            div.className = `px-4 py-2 text-white text-sm cursor-pointer hover:bg-[#214a3c] ${index === currentFocus ? 'bg-[#214a3c]' : ''}`;
+            div.innerHTML = `
+              <div class="flex items-center justify-between">
+                <span>${movie.name}</span>
+                <span class="text-[#8ecdb7] text-xs">Tap to view</span>
+              </div>
+            `;
+            div.addEventListener('click', () => {
+              window.location.href = movie.file;
+            });
+            div.addEventListener('mouseenter', () => {
+              currentFocus = index;
+              updateSuggestionHighlight();
+            });
+            mainSearchSuggestions.appendChild(div);
+          });
+          
+          mainSearchSuggestions.classList.remove('hidden');
+        }
+
+        function updateSuggestionHighlight() {
+          const suggestions = mainSearchSuggestions.querySelectorAll('div');
+          suggestions.forEach((suggestion, index) => {
+            if (index === currentFocus) {
+              suggestion.classList.add('bg-[#214a3c]');
+            } else {
+              suggestion.classList.remove('bg-[#214a3c]');
+            }
+          });
+        }
+
+        mainSearchInput.addEventListener('keydown', (e) => {
+          const suggestions = mainSearchSuggestions.querySelectorAll('div');
+          
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            currentFocus = (currentFocus + 1) % suggestions.length;
+            updateSuggestionHighlight();
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            currentFocus = currentFocus <= 0 ? suggestions.length - 1 : currentFocus - 1;
+            updateSuggestionHighlight();
+          } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (currentFocus >= 0 && suggestions[currentFocus]) {
+              suggestions[currentFocus].click();
+            }
+          } else if (e.key === 'Escape') {
+            mainSearchSuggestions.classList.add('hidden');
+            currentFocus = -1;
+          }
+        });
+
+        mainSearchButton.addEventListener('click', () => {
+          const query = mainSearchInput.value.toLowerCase();
+          const movie = allMovies.find(m => m.name.toLowerCase() === query);
+          if (movie) {
+            window.location.href = movie.file;
+          }
+        });
+
+        // Hide suggestions when clicking outside
+        document.addEventListener('click', (e) => {
+          if (!mainSearchInput.contains(e.target) && !mainSearchSuggestions.contains(e.target)) {
+            mainSearchSuggestions.classList.add('hidden');
+            currentFocus = -1;
+          }
+        });
+
+        document.querySelectorAll('a.text-sm.font-medium.leading-normal').forEach(link => {
+            if (link.getAttribute('href') === '#') {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    mainSearchInput.value = '';
+                    mainSearchSuggestions.classList.add('hidden');
+                });
+            }
+        });
+      });
+    </script>
+  </body>
+</html>
