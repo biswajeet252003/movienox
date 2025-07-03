@@ -1000,6 +1000,19 @@ export const downloadLinks = {
       }
     }
   },
+  'aho-vikramaarka': {
+    title: 'Aho Vikramaarka',
+    downloadLinks: {
+      'HDTV': {
+        'direct': 'https://pixeldrain.dev/api/file/rFFkFbf1?download',
+        'CDNBaba': 'https://cdn1.cdnbaba.xyz/Aho%20Vikramaarka!%202024%20HDTV%20Hindi%201080p%20x264%20AVC%20DD%202.0%20CineVood.mkv'
+      },
+      '720p': {
+        'direct': 'https://pixeldrain.dev/api/file/Rn5o8wwM?download',
+        'GoogleDrive': 'https://video-downloads.googleusercontent.com/ADGPM2m0h_jqIkzcIG4GscM_f3yYQCDBQ7DXGzzDqPuxlp2q9ECt0gOuJCwgBqUxmvkquRZU3HX8eX_du83NXH9hbME-dgL3Qv-cy9ydnton9rXDMxYL8XJnm9klppZQyVEMQg_4bS_o178gajUya46B5-8FYqqcMWafOlyii4GldxB5Bhi2vSFyAKY0TtuG_dXzDnRWS0cy7kA0ysK29NCulid90Aml7O1-JE8jMYqlDT2RU_S0dyi3i14PVRzsAm772T5-KiKu'
+      }
+    }
+  },
   // Default template for movies/series not in the list
   'default': {
     title: 'Movie Title',
