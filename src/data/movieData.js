@@ -2348,7 +2348,7 @@ export const movieData = [
     certification: 'U/A',
     awards: [],
     streaming: [],
-    poster: 'https://i.imgur.com/placeholder-bou-buttu-bhuta-poster.jpg', // Update with real poster if available
+    poster: 'https://i.imgur.com/6asvClv.png', // Update with real poster if available
     banner: 'https://i.imgur.com/placeholder-bou-buttu-bhuta-banner.jpg', // Update with real banner if available
     fullDescription: `Buttu and his mother live a modest life in an Odisha village, with Buttu dreaming of leaving for a better life elsewhere. However, a series of unforeseen events disrupt their lives. Will they overcome the challenges and realise their dreams?\n\nA horror thriller based on Odia folklore, the film explores the emotional and supernatural struggles of a mother trying to save her son from a formidable spirit ('Bhuta'). The story blends local culture, suspense, and horror, with strong performances and a unique narrative style.`,
     director: 'Jagdish Mishra',
