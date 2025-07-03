@@ -398,4 +398,148 @@ seriesData.push({
   screenshots: [
     'https://i.imgur.com/EcqL6EY.jpeg'
   ],
+});
+
+seriesData.push({
+  id: 'college-romance-s4',
+  title: 'College Romance Season 4',
+  industry: 'Bollywood',
+  writer: 'Kunal Aneja, Abhishek Srivastava, Akash Ahuja, Sidhant Mago, Manan Madaan, Pankaj Mavchi, Ashutosh Chaturvedi',
+  producer: 'Arunabh Kumar',
+  music: 'Saar',
+  runtime: '5 episodes (avg 30m)',
+  language: 'Hindi',
+  budget: '',
+  boxOffice: '',
+  certification: 'U/A',
+  awards: ['Nominated: Filmfare OTT Award for Best Comedy Series'],
+  streaming: ['SonyLIV'],
+  poster: 'https://static.toiimg.com/photo/80496054.cms', // Replace if you have a better poster
+  banner: 'https://static.toiimg.com/photo/80496061.cms', // Replace if you have a better banner
+  fullDescription: 'It\'s the final year! Madness and mayhem ensue as the seniors prepare to step out into the real world. While they spend time on movie nights, trips, hanging out, job interviews and final farewells, they must confront their anxieties and insecurities to forge their own paths in life. Will they stumble and fall or eventually stand tall? The final season of \'College Romance\' stars Apoorva Arora, Gagan Arora, Keshav Sadhna, Shreya Mehta, Nupur Nagpal, Manjot Singh, Eklavey Kashyap and Jhanvi Rawat.',
+  creators: ['The Viral Fever', 'Arunabh Kumar'],
+  cast: [
+    { name: 'Keshav Sadhna', as: 'Karan' },
+    { name: 'Apoorva Arora', as: 'Naira' },
+    { name: 'Manjot Singh', as: 'Trippy' },
+    { name: 'Gagan Arora', as: 'Bagga' },
+    { name: 'Shreya Mehta', as: 'Deepika' },
+    { name: 'Nupur Nagpal', as: 'Dhatrapriya' },
+    { name: 'Eklavey Kashyap', as: 'Harry' },
+    { name: 'Jhanvi Rawat', as: 'Rawi' }
+  ],
+  releaseDate: '14 July 2023',
+  genres: ['Comedy', 'Drama', 'Romance'],
+  seasons: 4,
+  rating: 8.3,
+  reviews: 29000,
+  ratingDistribution: [
+    { stars: 5, percentage: 60 },
+    { stars: 4, percentage: 25 },
+    { stars: 3, percentage: 10 },
+    { stars: 2, percentage: 3 },
+    { stars: 1, percentage: 2 },
+  ],
+  trailerId: '', // Add YouTube trailer ID if available
+  screenshots: [
+    'https://static.toiimg.com/photo/80496064.cms',
+    'https://static.toiimg.com/photo/80496071.cms',
+    'https://static.toiimg.com/photo/80496084.cms'
+  ],
+});
+
+seriesData.push({
+  id: 'college-romance-s2',
+  title: 'College Romance Season 2',
+  industry: 'Bollywood',
+  writer: 'Kunal Aneja, Abhishek Srivastava, Akash Ahuja, Sidhant Mago, Manan Madaan, Pankaj Mavchi, Ashutosh Chaturvedi',
+  producer: 'Arunabh Kumar',
+  music: 'Saar',
+  runtime: '5 episodes (avg 30m)',
+  language: 'Hindi',
+  budget: '',
+  boxOffice: '',
+  certification: 'U/A',
+  awards: ['Nominated: Filmfare OTT Award for Best Comedy Series'],
+  streaming: ['SonyLIV'],
+  poster: 'https://www.koimoi.com/wp-content/new-galleries/2021/01/exclusive-review-college-romance-season-2-is-yet-another-winner-caters-to-the-young-adults-0001.jpg',
+  banner: 'https://static.toiimg.com/photo/80496061.cms',
+  fullDescription: 'The second season continues the hilarious and heartwarming journey of Karan, Naira, Trippy, Bagga, and Deepika as they navigate new relationships, college drama, and the ups and downs of youth. With new characters and more chaos, the group faces fresh challenges and unforgettable moments.',
+  creators: ['The Viral Fever', 'Arunabh Kumar'],
+  cast: [
+    { name: 'Keshav Sadhna', as: 'Karan' },
+    { name: 'Apoorva Arora', as: 'Naira' },
+    { name: 'Gagan Arora', as: 'Bagga' },
+    { name: 'Shreya Mehta', as: 'Deepika' },
+    { name: 'Nupur Nagpal', as: 'Dhatrapriya' },
+    { name: 'Eklavey Kashyap', as: 'Harry' },
+    { name: 'Jhanvi Rawat', as: 'Rawi' },
+    { name: 'Ankur Pathak', as: 'Bhati' }
+  ],
+  releaseDate: '29 January 2021',
+  genres: ['Comedy', 'Drama', 'Romance'],
+  seasons: 2,
+  rating: 8.3,
+  reviews: 29000,
+  ratingDistribution: [
+    { stars: 5, percentage: 60 },
+    { stars: 4, percentage: 25 },
+    { stars: 3, percentage: 10 },
+    { stars: 2, percentage: 3 },
+    { stars: 1, percentage: 2 },
+  ],
+  trailerId: '', // Add YouTube trailer ID if available
+  screenshots: [
+    'https://static.toiimg.com/photo/80496064.cms',
+    'https://static.toiimg.com/photo/80496071.cms',
+    'https://static.toiimg.com/photo/80496084.cms'
+  ],
+});
+
+seriesData.push({
+  id: 'college-romance-s3',
+  title: 'College Romance Season 3',
+  industry: 'Bollywood',
+  writer: 'Kunal Aneja, Abhishek Srivastava, Akash Ahuja, Sidhant Mago, Manan Madaan, Pankaj Mavchi, Ashutosh Chaturvedi',
+  producer: 'Arunabh Kumar',
+  music: 'Saar',
+  runtime: '5 episodes (avg 30m)',
+  language: 'Hindi',
+  budget: '',
+  boxOffice: '',
+  certification: 'U/A',
+  awards: ['Nominated: Filmfare OTT Award for Best Comedy Series'],
+  streaming: ['SonyLIV'],
+  poster: 'https://static.toiimg.com/photo/80496054.cms', // Replace if you have a better poster
+  banner: 'https://static.toiimg.com/photo/80496061.cms', // Replace if you have a better banner
+  fullDescription: 'Season 3 continues the journey of Karan, Naira, Bagga, Deepika, and Dhatrapriya as they face new challenges, relationships, and the realities of college life. With more drama, comedy, and romance, the group navigates the ups and downs of their final years together.',
+  creators: ['The Viral Fever', 'Arunabh Kumar'],
+  cast: [
+    { name: 'Keshav Sadhna', as: 'Karan' },
+    { name: 'Apoorva Arora', as: 'Naira' },
+    { name: 'Gagan Arora', as: 'Bagga' },
+    { name: 'Shreya Mehta', as: 'Deepika' },
+    { name: 'Nupur Nagpal', as: 'Dhatrapriya' },
+    { name: 'Eklavey Kashyap', as: 'Harry' },
+    { name: 'Jhanvi Rawat', as: 'Rawi' },
+    { name: 'Ankur Pathak', as: 'Bhati' }
+  ],
+  releaseDate: '16 September 2022',
+  genres: ['Comedy', 'Drama', 'Romance'],
+  seasons: 3,
+  rating: 8.3,
+  reviews: 29000,
+  ratingDistribution: [
+    { stars: 5, percentage: 60 },
+    { stars: 4, percentage: 25 },
+    { stars: 3, percentage: 10 },
+    { stars: 2, percentage: 3 },
+    { stars: 1, percentage: 2 },
+  ],
+  trailerId: '', // Add YouTube trailer ID if available
+  screenshots: [
+    'https://static.toiimg.com/photo/80496064.cms',
+    'https://static.toiimg.com/photo/80496071.cms',
+    'https://static.toiimg.com/photo/80496084.cms'
+  ],
 }); 

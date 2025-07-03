@@ -52,4 +52,38 @@ export const seriesDownloadLinks = {
       // Example: '1080p': { 'HubDrive': 'your-link-here' }
     }
   },
+  'college-romance-s4': {
+    title: 'College Romance Season 4',
+    downloadLinks: {
+      '1080p Batch': {
+        'HBLinks': 'https://hblinks.pro/archives/63688'
+      },
+      '720p': {
+        'HBLinks': 'https://hblinks.pro/archives/63687'
+      }
+    }
+  },
+  'college-romance-s2': {
+    title: 'College Romance Season 2',
+    downloadLinks: {
+      '1080p': {
+        'HubDrive': 'https://hubdrive.wales/file/2554512500'
+      },
+      '720p': {
+        'HBLinks': 'https://hblinks.pro/archives/27660',
+        'direct': 'https://pixeldrain.dev/api/file/whzGVWWB?download'
+      }
+    }
+  },
+  'college-romance-s3': {
+    title: 'College Romance Season 3',
+    downloadLinks: {
+      '720p': {
+        'direct': 'https://storage.googleapis.com/photos-web-downloads-anonymous/20250506T071513.296Z/4133399871716478688/0422e215-f92c-47c6-a821-f7968dd7deae/1/4b9fd5aa-5d40-4a22-b00a-c2ea5cc60f66'
+      },
+      '480p': {
+        'HubDrive': 'https://hubdrive.wales/file/1880487982'
+      }
+    }
+  },
 }; 
