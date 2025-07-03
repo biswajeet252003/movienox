@@ -49,7 +49,30 @@ export const seriesDownloadLinks = {
   'criminal-justice-family-matter': {
     title: 'Criminal Justice: A Family Matter',
     downloadLinks: {
-      // Example: '1080p': { 'HubDrive': 'your-link-here' }
+      '4K E01': {
+        'HubDrive': 'https://hubdrive.wales/file/2769891210'
+      },
+      '4K E02': {
+        'HubDrive': 'https://hubdrive.wales/file/4755615120'
+      },
+      '4K E03': {
+        'HubDrive': 'https://hubdrive.wales/file/2567102159'
+      },
+      '4K E04': {
+        'HubDrive': 'https://hubdrive.wales/file/3781882851'
+      },
+      '4K E05': {
+        'HubDrive': 'https://hubdrive.wales/file/2869702935'
+      },
+      '4K E06': {
+        'HubDrive': 'https://hubdrive.wales/file/4316482105'
+      },
+      '4K E07': {
+        'HubDrive': 'https://hubdrive.wales/file/1946363922'
+      },
+      '4K E08': {
+        'HubDrive': 'https://hubdrive.wales/file/4543137715'
+      }
     }
   },
   'college-romance-s4': {
