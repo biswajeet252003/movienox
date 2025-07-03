@@ -46,4 +46,10 @@ export const seriesDownloadLinks = {
       }
     }
   },
+  'criminal-justice-family-matter': {
+    title: 'Criminal Justice: A Family Matter',
+    downloadLinks: {
+      // Example: '1080p': { 'HubDrive': 'your-link-here' }
+    }
+  },
 }; 

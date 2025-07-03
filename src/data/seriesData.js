@@ -346,4 +346,56 @@ seriesData.push({
   ],
   trailerId: '',
   screenshots: [],
+});
+
+seriesData.push({
+  id: 'criminal-justice-family-matter',
+  title: 'Criminal Justice: A Family Matter',
+  industry: 'Bollywood',
+  writer: 'Harman Wadala, Sameer Mishra, Sandeep Jain',
+  producer: 'Sameer Nair, Deepak Segal, Sameer Gogate',
+  music: '',
+  runtime: '8 episodes (avg 40m)',
+  language: 'Hindi',
+  budget: '',
+  boxOffice: '',
+  certification: 'U/A',
+  awards: [],
+  streaming: ['JioHotstar'],
+  poster: 'https://i.imgur.com/EcqL6EY.jpeg',
+  banner: 'https://i.imgur.com/hc0cKNT.png',
+  fullDescription: 'Veteran lawyer Madhav Mishra defends Raj Nagpal, found holding the murdered body of nurse Roshni Saluja after his daughter\'s birthday. As the courtroom battle intensifies, buried truths begin to surface, suggesting not everyone is who they claim to be.',
+  creators: ['Harman Wadala', 'Rahul Ved Prakash'],
+  cast: [
+    { name: 'Pankaj Tripathi', as: 'Advocate Madhav Mishra' },
+    { name: 'Mohammed Zeeshan Ayyub', as: 'Raj Nagpal' },
+    { name: 'Surveen Chawla', as: 'Anju Nagpal' },
+    { name: 'Asha Negi', as: 'Roshni Saluja' },
+    { name: 'Khushboo Atre', as: 'Ratna Mishra' },
+    { name: 'Mita Vashisht', as: 'Mandira Mathur' },
+    { name: 'Shweta Basu Prasad', as: 'Lekha Agastya' },
+    { name: 'Khushi Bharadwaj', as: 'Ira' },
+    { name: 'Barkha Singh', as: 'Shivani Mathur' },
+    { name: 'Kalyanee Mulay', as: 'API Gauri Karmarkar' },
+    { name: 'Sohaila Kapur', as: 'Gurmeet Nagpal' },
+    { name: 'Aatm Prakash Mishra', as: 'Deepu' },
+    { name: 'Ajeet Singh Palawat', as: 'Sr. Inspector Harsh Pradhan' },
+    { name: 'Ranjit Deval', as: 'Sessions Court Judge' }
+  ],
+  releaseDate: '29 May 2025',
+  genres: ['Crime', 'Legal drama', 'Thriller'],
+  seasons: 1,
+  rating: 7.0,
+  reviews: 6100,
+  ratingDistribution: [
+    { stars: 5, percentage: 50 },
+    { stars: 4, percentage: 25 },
+    { stars: 3, percentage: 15 },
+    { stars: 2, percentage: 5 },
+    { stars: 1, percentage: 5 },
+  ],
+  trailerId: '', // Add YouTube trailer ID if available
+  screenshots: [
+    'https://i.imgur.com/EcqL6EY.jpeg'
+  ],
 }); 

@@ -992,6 +992,14 @@ export const downloadLinks = {
       }
     }
   },
+  'aata-thambaycha-naay': {
+    title: 'Aata Thambaycha Naay!',
+    downloadLinks: {
+      'WEB-DL Marathi 2160p 10bit HEVC DDP 5.1 ESub': {
+        'Direct Download': 'https://video-downloads.googleusercontent.com/ADGPM2m7ArP1CJUu4IvkCMBxnNvvTYHE5YUHqtK1mzbndhXZRckbWgaiDM4vwzqwRy4l_1NGCS0JChwpv_DwZ_IAghXxaoKBGWgNdh-jikrG8Bx1pXMTIDPw2W2kD9fmwohWz4Jd50MiQ-8jUPH1Lyv39C1K-7q0pUkZkc8FU6Cw-L1i1IhXToBWzZT0eruCBe4TECrbE6DQ8_61QbxC1MPL6Fe_iFg9m-6RkwZXXU0ay86TYBSkBcoQFPKWBS3GSAJjL9Ryvd7u8SfjTy1bvQUaOHzBzwGCMjzfsQT2fHUV5U4qswMgnWCv9QdrT5DMOqqkF7rPMA_aLkbPHQol0O2yMNvl9okVi0DD3HFEZVFlbcJqZ6oL2WMbGNHXROIE3Cbr-J1L8adsAMKA7Mun7HrQhzqGAIjyLO4bnCKPEDWGfzLVgD9GDQoRVXUJ-JLrJWKc4Vfa4JV6UkDt6UpHEHMLgBLvsngR6NiDEoFche5ATMlitM3JCDhCrgWFcjELXhjV6-tJQijhrYgqLUyYFAoCDXfwn_42xn-MygLSPe_SMMf_fuiUU0elL-uc_7adf1S99gTUR5d0H_D6fjhyswqNscsAJeNyeiqpOObS2g22tdH0CxWyVsEuOrSlezZT7pnaghVSbHZddH4ZJZf2qLow-u_YutFKgpBUhOJc35on4QEUifa8QeASNdVpxrr40H1KaRnJqRWDT8k1wmZNl97dOfsD6hToDkeCR9IwGWRULng0wp4AmbHcd0Njj7s1A2hef7k70T7qy_E0kBogudeceFVvTHOs9Wo1iA3W53ji_vpStA1MOWZQn8O-dgtWTN2VY1eljw2jYPuIrfxQvha2iA2W-_iTAtTpyWJyh5c9vupRG3hm1n6gAAJP_R0OabARElOK3Qsz6tkb-uzYxx3WDcUkR79cOebFNBH5307DBKisy7JALmUt6aMQ1Z4H68qsz_T-Y3b_F6hSAHuYNuxQAhfKrgwCTzIBKuz3EINZ-v2X9ku79kdCsD1vsaWB6diLyvww4Dzpt2o02uNCcRtBe9mxL9td1_yrw6qju9PnlbXUxqBU0yM'
+      }
+    }
+  },
   // Default template for movies/series not in the list
   'default': {
     title: 'Movie Title',
