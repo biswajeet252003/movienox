@@ -346,7 +346,7 @@ seriesData.push({
   ],
   trailerId: '',
   screenshots: [],
-});
+}); 
 
 seriesData.push({
   id: 'criminal-justice-family-matter',

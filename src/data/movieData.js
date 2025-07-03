@@ -2376,5 +2376,61 @@ export const movieData = [
     ],
     trailerId: '', // Add YouTube trailer ID if available
     screenshots: [], // Add screenshot URLs if available
+  },
+  {
+    id: 'warfare',
+    title: 'Warfare',
+    industry: 'Hollywood',
+    writer: 'Alex Garland, Ray Mendoza',
+    producer: 'Andrew Macdonald, Allon Reich, Peter Rice, Matthew Penry-Davey, Joanne Smith',
+    music: '',
+    runtime: '1h 35m',
+    language: 'English',
+    budget: 'N/A',
+    boxOffice: 'N/A',
+    certification: 'R',
+    awards: [],
+    streaming: ['Amazon Prime Video', 'Apple TV', 'Fandango At Home', 'FlixFling', 'Plex'],
+    poster: 'https://i.imgur.com/GpG3Qy7.jpeg', // Update with real poster if available
+    banner: 'https://i.imgur.com/placeholder-warfare-banner.jpg', // Update with real banner if available
+    fullDescription: `A boots-on-the-ground story of modern warfare and brotherhood, told in real time and based on the memory of the people who lived it. A platoon of American Navy SEALs on a surveillance mission gone wrong in insurgent territory must survive an ambush. The film is a visceral, anti-war experience, focusing on the chaos and trauma of combat, based on the memories of Iraq War veteran Ray Mendoza.`,
+    director: 'Alex Garland, Ray Mendoza',
+    cast: [
+      { name: "D'Pharaoh Woon-A-Tai", as: 'Ray' },
+      { name: 'Will Poulter', as: 'Erik' },
+      { name: 'Cosmo Jarvis', as: 'Elliott' },
+      { name: 'Kit Connor', as: 'Tommy' },
+      { name: 'Finn Bennett', as: 'John' },
+      { name: 'Taylor John Smith', as: 'Frank' },
+      { name: 'Michael Gandolfini', as: 'Lt. MacDonald' },
+      { name: 'Adain Bradley', as: 'Sgt Laerrus' },
+      { name: 'Noah Centineo', as: 'Brian' },
+      { name: 'Evan Holtzman', as: 'Brock' },
+      { name: 'Henry Zaga', as: 'Aaron' },
+      { name: 'Joseph Quinn', as: 'Sam' },
+      { name: 'Charles Melton', as: 'Jake' },
+      { name: 'Aaron Mackenzie', as: 'Kelly' },
+      { name: 'Alex Brockdorff', as: 'Mikey' },
+      { name: 'Joe Macaulay', as: 'Mo' },
+      { name: 'Laurie Duncan', as: 'Pete' },
+      { name: 'Jake Lampert', as: 'Ted' },
+      { name: 'Heider Ali', as: 'Sidar' },
+      { name: 'Nathan Altai', as: 'Farid' },
+      { name: 'Aso Sherabayani', as: 'Samir' },
+      { name: 'Alexander Angelikis', as: 'Bushmaster 3 (uncredited)' }
+    ],
+    releaseDate: '11 April 2025',
+    genres: ['War', 'Action', 'Drama'],
+    rating: 0,
+    reviews: 0,
+    ratingDistribution: [
+      { stars: 5, percentage: 0 },
+      { stars: 4, percentage: 0 },
+      { stars: 3, percentage: 0 },
+      { stars: 2, percentage: 0 },
+      { stars: 1, percentage: 0 },
+    ],
+    trailerId: '', // Add YouTube trailer ID if available
+    screenshots: [], // Add screenshot URLs if available
   }
 ]; 

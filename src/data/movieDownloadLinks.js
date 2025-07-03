@@ -1031,5 +1031,14 @@ export const downloadLinks = {
         'Direct Download': '#'
       }
     }
-  }
+  },
+  'warfare': {
+    title: 'Warfare',
+    downloadLinks: {
+      '1080p': {
+        'BBDownload': 'https://bbdownload.filesdl.in/fdownload.php?id=aHR0cHM6Ly9waG90b3MuZ29vZ2xlLmNvbS9zaGFyZS9BRjFRaXBQQmRuSHZaYkxnS1ZOWXhwcTFrSDNNRlVrSUlCeF90b1dWTi1NYl82RUFYUjNORkdlWWpORkY3dVdWbjl4STlRP2tleT1VMDE2TjI0MVpEVjJWMlYwVVZZeE5WOURiRzR0WVZKdGJXOVZUazlS&token=MDMwNzI1',
+        'Pixeldrain': 'https://pixeldrain.dev/api/file/DLjdBM2U?download'
+      }
+    }
+  },
 }; 
