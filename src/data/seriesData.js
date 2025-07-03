@@ -510,8 +510,8 @@ seriesData.push({
   certification: 'U/A',
   awards: ['Nominated: Filmfare OTT Award for Best Comedy Series'],
   streaming: ['SonyLIV'],
-  poster: 'https://static.toiimg.com/photo/80496054.cms', // Replace if you have a better poster
-  banner: 'https://static.toiimg.com/photo/80496061.cms', // Replace if you have a better banner
+  poster: 'https://i.imgur.com/NyO4ieV.png',
+  banner: 'https://static.toiimg.com/photo/80496061.cms',
   fullDescription: 'Season 3 continues the journey of Karan, Naira, Bagga, Deepika, and Dhatrapriya as they face new challenges, relationships, and the realities of college life. With more drama, comedy, and romance, the group navigates the ups and downs of their final years together.',
   creators: ['The Viral Fever', 'Arunabh Kumar'],
   cast: [
