@@ -228,10 +228,8 @@ export const downloadLinks = {
   'bou-buttu-bhuta': {
     title: 'Bou Buttu Bhuta',
     downloadLinks: {
-      
       '1080p': {
-        'Gofile (Resumable)': 'https://gofile.io/d/vlMOSu',
-        
+        'Gofile': 'https://gofile.io/d/vlMOSu'
       }
     }
   },

@@ -1420,7 +1420,7 @@ export const movieData = [
     awards: [],
     streaming: ['Amazon Prime Video'],
     poster: 'https://i.imgur.com/Ec1M3ed.jpeg',
-    banner: '',
+    banner: 'https://i.imgur.com/6asvClv.png',
     fullDescription: 'Three engineering students in Bangalore get entangled with a local gangster, Ranga, leading to a series of hilarious and action-packed events.',
     director: 'Jithu Madhavan',
     cast: [
@@ -2333,5 +2333,48 @@ export const movieData = [
     ],
     trailerId: '',
     screenshots: [],
+  },
+  {
+    id: 'bou-buttu-bhuta',
+    title: 'Bou Buttu Bhuta',
+    industry: 'Ollywood',
+    writer: 'Mohammad Imran, Pranab Prasanna Rath',
+    producer: 'Babushaan Films',
+    music: 'Gaurav Anand',
+    runtime: '2h 56m',
+    language: 'Odia',
+    budget: 'High (one of the highest in Odisha)',
+    boxOffice: 'N/A',
+    certification: 'U/A',
+    awards: [],
+    streaming: [],
+    poster: 'https://i.imgur.com/placeholder-bou-buttu-bhuta-poster.jpg', // Update with real poster if available
+    banner: 'https://i.imgur.com/placeholder-bou-buttu-bhuta-banner.jpg', // Update with real banner if available
+    fullDescription: `Buttu and his mother live a modest life in an Odisha village, with Buttu dreaming of leaving for a better life elsewhere. However, a series of unforeseen events disrupt their lives. Will they overcome the challenges and realise their dreams?\n\nA horror thriller based on Odia folklore, the film explores the emotional and supernatural struggles of a mother trying to save her son from a formidable spirit ('Bhuta'). The story blends local culture, suspense, and horror, with strong performances and a unique narrative style.`,
+    director: 'Jagdish Mishra',
+    cast: [
+      { name: 'Babushan Mohanty', as: 'Buttu' },
+      { name: 'Archita Sahu', as: 'Rinki' },
+      { name: 'Aparajita Mohanty', as: 'Ratnamala (Bou)' },
+      { name: 'Mangu Kumar Sahoo', as: 'Cyko Babuo' },
+      { name: 'Jagannath Seth', as: 'Amari' },
+      { name: 'Choudhury Jayprakash Das', as: 'Major Role' },
+      { name: 'Udit Guru', as: 'Major Role' },
+      { name: 'Ravi Mishra', as: 'Major Role' },
+      { name: 'Anugulia Bunty', as: 'Major Role' }
+    ],
+    releaseDate: '12 June 2025',
+    genres: ['Horror', 'Thriller', 'Drama', 'Folklore'],
+    rating: 0,
+    reviews: 0,
+    ratingDistribution: [
+      { stars: 5, percentage: 0 },
+      { stars: 4, percentage: 0 },
+      { stars: 3, percentage: 0 },
+      { stars: 2, percentage: 0 },
+      { stars: 1, percentage: 0 },
+    ],
+    trailerId: '', // Add YouTube trailer ID if available
+    screenshots: [], // Add screenshot URLs if available
   }
 ]; 
