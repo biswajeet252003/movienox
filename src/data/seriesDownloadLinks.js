@@ -86,4 +86,12 @@ export const seriesDownloadLinks = {
       }
     }
   },
+  'college-romance-s1': {
+    title: 'College Romance Season 1',
+    downloadLinks: {
+      '720p WEB-RIP': {
+        'FilePress': 'https://new5.filepress.live/file/66a3c7bdd1cecf57eb3fc4e6'
+      }
+    }
+  },
 }; 

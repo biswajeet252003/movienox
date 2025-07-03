@@ -414,8 +414,8 @@ seriesData.push({
   certification: 'U/A',
   awards: ['Nominated: Filmfare OTT Award for Best Comedy Series'],
   streaming: ['SonyLIV'],
-  poster: 'https://static.toiimg.com/photo/80496054.cms', // Replace if you have a better poster
-  banner: 'https://static.toiimg.com/photo/80496061.cms', // Replace if you have a better banner
+  poster: 'https://i.imgur.com/NcXAV7W.png',
+  banner: 'https://static.toiimg.com/photo/80496061.cms',
   fullDescription: 'It\'s the final year! Madness and mayhem ensue as the seniors prepare to step out into the real world. While they spend time on movie nights, trips, hanging out, job interviews and final farewells, they must confront their anxieties and insecurities to forge their own paths in life. Will they stumble and fall or eventually stand tall? The final season of \'College Romance\' stars Apoorva Arora, Gagan Arora, Keshav Sadhna, Shreya Mehta, Nupur Nagpal, Manjot Singh, Eklavey Kashyap and Jhanvi Rawat.',
   creators: ['The Viral Fever', 'Arunabh Kumar'],
   cast: [
@@ -527,6 +527,56 @@ seriesData.push({
   releaseDate: '16 September 2022',
   genres: ['Comedy', 'Drama', 'Romance'],
   seasons: 3,
+  rating: 8.3,
+  reviews: 29000,
+  ratingDistribution: [
+    { stars: 5, percentage: 60 },
+    { stars: 4, percentage: 25 },
+    { stars: 3, percentage: 10 },
+    { stars: 2, percentage: 3 },
+    { stars: 1, percentage: 2 },
+  ],
+  trailerId: '', // Add YouTube trailer ID if available
+  screenshots: [
+    'https://static.toiimg.com/photo/80496064.cms',
+    'https://static.toiimg.com/photo/80496071.cms',
+    'https://static.toiimg.com/photo/80496084.cms'
+  ],
+});
+
+seriesData.push({
+  id: 'college-romance-s1',
+  title: 'College Romance Season 1',
+  industry: 'Bollywood',
+  writer: 'Kunal Aneja, Abhishek Srivastava',
+  producer: 'Arunabh Kumar',
+  music: 'Saar',
+  runtime: '5 episodes (avg 30m)',
+  language: 'Hindi',
+  budget: '',
+  boxOffice: '',
+  certification: 'U/A',
+  awards: ['Nominated: Filmfare OTT Award for Best Comedy Series'],
+  streaming: ['TVFPlay', 'YouTube'],
+  poster: 'https://static.toiimg.com/photo/80496054.cms',
+  banner: 'https://static.toiimg.com/photo/80496061.cms',
+  fullDescription: 'Three best friends—Karan, Trippy, and Naira—look for love, laughs, and some lifelong memories while attending college together. Their journey is filled with relatable college drama, romance, and comedy, capturing the essence of youth and friendship.',
+  creators: ['The Viral Fever', 'Arunabh Kumar'],
+  cast: [
+    { name: 'Keshav Sadhna', as: 'Karan' },
+    { name: 'Apoorva Arora', as: 'Naira' },
+    { name: 'Manjot Singh', as: 'Trippy' },
+    { name: 'Gagan Arora', as: 'Bagga' },
+    { name: 'Shreya Mehta', as: 'Deepika' },
+    { name: 'Hira Ashar', as: 'Raveena Patel' },
+    { name: 'Shiva Kumar', as: 'Munjal Sir' },
+    { name: 'Ambrish Verma', as: 'Anshuman' },
+    { name: 'Ankit Motghare', as: 'Birju' },
+    { name: 'Geetika Budhiraja', as: 'Naina' }
+  ],
+  releaseDate: '7 August 2018',
+  genres: ['Comedy', 'Drama', 'Romance'],
+  seasons: 1,
   rating: 8.3,
   reviews: 29000,
   ratingDistribution: [
