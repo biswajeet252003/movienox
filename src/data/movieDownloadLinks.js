@@ -1041,4 +1041,22 @@ export const downloadLinks = {
       }
     }
   },
+  'sultan': {
+    title: 'Sultan',
+    fileSizes: ['700MB', '1.4GB', '2.8GB'],
+    downloadLinks: {
+      '480p': {
+        'HubCloud': 'https://hubcloud.ink/drive/sultan-480p',
+        'BBDownload': 'https://bbdownload.filesdl.in/fdownload.php?id=sultan-480p'
+      },
+      '720p': {
+        'HubCloud': 'https://hubcloud.ink/drive/sultan-720p',
+        'BBDownload': 'https://bbdownload.filesdl.in/fdownload.php?id=sultan-720p'
+      },
+      '1080p': {
+        'HubCloud': 'https://hubcloud.ink/drive/sultan-1080p',
+        'BBDownload': 'https://bbdownload.filesdl.in/fdownload.php?id=sultan-1080p'
+      }
+    }
+  },
 }; 

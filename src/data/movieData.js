@@ -2432,5 +2432,47 @@ export const movieData = [
     ],
     trailerId: '', // Add YouTube trailer ID if available
     screenshots: [], // Add screenshot URLs if available
+  },
+  {
+    id: 'sultan',
+    title: 'Sultan',
+    industry: 'Bollywood',
+    writer: 'Ali Abbas Zafar',
+    producer: 'Aditya Chopra',
+    music: 'Vishal-Shekhar',
+    runtime: '2h 50m',
+    language: 'Hindi',
+    budget: '₹145 crore',
+    boxOffice: '₹623.33 crore',
+    certification: 'U/A',
+    awards: ['Best Action Movie - Shanghai International Film Fest'],
+    streaming: ['Amazon Prime Video'],
+    poster: 'https://i.imgur.com/4xNO8lZ.jpeg',
+    banner: 'https://i.imgur.com/3RcLKZf.jpeg', // Placeholder, update if you have a better banner
+    fullDescription: 'Sultan Ali Khan, a wrestler from Haryana, battles personal and professional challenges to regain his lost glory and the love of his life. A story of grit, determination, and redemption.',
+    director: 'Ali Abbas Zafar',
+    cast: [
+      { name: 'Salman Khan', as: 'Sultan Ali Khan' },
+      { name: 'Anushka Sharma', as: 'Aarfa Hussain' },
+      { name: 'Randeep Hooda', as: 'Fateh Singh' },
+      { name: 'Amit Sadh', as: 'Aakash Oberoi' },
+      { name: 'Kumud Mishra', as: 'Barkat Hussain' }
+    ],
+    releaseDate: '6 July 2016',
+    genres: ['Action', 'Drama', 'Romance', 'Sports'],
+    rating: 0,
+    reviews: 0,
+    ratingDistribution: [
+      { stars: 5, percentage: 0 },
+      { stars: 4, percentage: 0 },
+      { stars: 3, percentage: 0 },
+      { stars: 2, percentage: 0 },
+      { stars: 1, percentage: 0 },
+    ],
+    trailerId: 'wPxqcq6Byq0',
+    screenshots: [
+      'https://m.media-amazon.com/images/M/MV5BMjA2NjQxNjQ2Nl5BMl5BanBnXkFtZTgwNzQ2ODg1OTE@._V1_.jpg',
+      'https://i.imgur.com/3RcLKZf.jpeg'
+    ],
   }
 ]; 
