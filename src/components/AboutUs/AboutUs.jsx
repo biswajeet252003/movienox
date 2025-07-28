@@ -6,7 +6,7 @@ const AboutUs = () => {
     <div className="about-us-container">
       <div className="about-us-content">
         <div className="about-header">
-          <h1 className="about-title">About MovieKnox</h1>
+          <h1 className="about-title">About MovieNox</h1>
           <p className="about-subtitle">Your Ultimate Movie & Series Destination</p>
         </div>
 
@@ -15,7 +15,7 @@ const AboutUs = () => {
             <div className="section-icon">🎬</div>
             <h2>Our Mission</h2>
             <p>
-              At MovieKnox, we believe that great entertainment should be accessible to everyone. 
+              At MovieNox, we believe that great entertainment should be accessible to everyone. 
               Our mission is to provide a seamless, user-friendly platform where movie and series 
               enthusiasts can discover, explore, and enjoy their favorite content.
             </p>
@@ -52,7 +52,7 @@ const AboutUs = () => {
             <div className="section-icon">👥</div>
             <h2>Our Team</h2>
             <p>
-              MovieKnox is built by a passionate team of developers, designers, and entertainment 
+              MovieNox is built by a passionate team of developers, designers, and entertainment 
               enthusiasts who are committed to creating the best possible user experience. 
               We continuously work to improve our platform and add new features based on user feedback.
             </p>
@@ -68,7 +68,7 @@ const AboutUs = () => {
             <div className="about-us-actions">
               <a href="/request" className="contact-btn">Request a Movie</a>
               <a 
-                href="https://t.me/Movieknox"
+                href="https://t.me/MovieNox"
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="contact-btn telegram-btn"

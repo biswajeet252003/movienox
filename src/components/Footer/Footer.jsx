@@ -49,12 +49,12 @@ const Footer = () => {
               </button>
             </div>
           </form>
-          <div className="footer-madeby">Made with <span style={{color:'#e25555', fontSize:'1.2em'}}>❤️</span> by MovieKnox Team</div>
-          <span style={{display:'block', marginTop:'12px'}}>© {new Date().getFullYear()} MovieKnox. All rights reserved.</span>
+          <div className="footer-madeby">Made with <span style={{color:'#e25555', fontSize:'1.2em'}}>❤️</span> by MovieNox Team</div>
+          <span style={{display:'block', marginTop:'12px'}}>© {new Date().getFullYear()} MovieNox. All rights reserved.</span>
         </div>
         <div className="footer-col footer-social-col">
           <div className="footer-social">
-            <a href="https://t.me/Movieknox" className="social-icon" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
+            <a href="https://t.me/MovieNox" className="social-icon" aria-label="Telegram" target="_blank" rel="noopener noreferrer">
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="12" fill="#229ED9"/><path d="M17.5 7.5L15.5 17.5C15.5 17.5 15.25 18 14.75 18C14.5 18 14.25 17.75 14.25 17.75L11.5 15.5L10.25 16.5C10.25 16.5 10 16.75 9.75 16.75C9.5 16.75 9.5 16.5 9.5 16.5L9.25 13.75L15.25 9.25C15.25 9.25 15.5 9 15.25 8.75C15 8.5 14.5 8.75 14.5 8.75L7.75 11.25C7.75 11.25 7.25 11.5 7.25 12C7.25 12.5 8 12.75 8 12.75L10 13.25L13.25 11.25" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
             </a>
             <a href="#" className="social-icon" aria-label="Instagram" target="_blank" rel="noopener noreferrer">

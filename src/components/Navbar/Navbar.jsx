@@ -292,7 +292,7 @@ const Navbar = () => {
       <div className="navbar-content">
         <div className="navbar-left">
           <NavLink to="/" className="navbar-logo">
-            <span className="navbar-title">KNOXMOVIE</span>
+            <span className="movienox-logo">Movie<span className="logo-x">Nox</span></span>
           </NavLink>
           
           {/* Desktop Navigation Links */}
@@ -303,7 +303,7 @@ const Navbar = () => {
             <NavLink to="/request" className="navbar-link">Request</NavLink>
             <NavLink to="/about" className="navbar-link">About</NavLink>
             <a 
-              href="https://t.me/KNOXMOVIE"
+              href="https://t.me/MovieNox"
               className="navbar-link telegram-link"
               target="_blank" 
               rel="noopener noreferrer"
@@ -447,7 +447,7 @@ const Navbar = () => {
             <NavLink to="/request" className="mobile-nav-link">Request</NavLink>
             <NavLink to="/about" className="mobile-nav-link">About</NavLink>
             <a 
-              href="https://t.me/KNOXMOVIE"
+              href="https://t.me/MovieNox"
               className="mobile-nav-link telegram-link"
               target="_blank" 
               rel="noopener noreferrer"

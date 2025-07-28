@@ -778,3 +778,33 @@
   color: #1ed290;
   background-color: rgba(30, 210, 144, 0.15);
 } 
+
+.movienox-logo {
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+  font-weight: 900;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  background: linear-gradient(90deg, #1ed290 30%, #24443a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  text-shadow: 0 2px 12px rgba(30,210,144,0.10);
+}
+
+.logo-x {
+  color: #fff;
+  background: none;
+  -webkit-text-fill-color: #fff;
+  text-shadow: 0 2px 12px rgba(30,210,144,0.18);
+} 
+
+@media (max-width: 768px) {
+  .movienox-logo {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 480px) {
+  .movienox-logo {
+    font-size: 1rem;
+  }
+} 
